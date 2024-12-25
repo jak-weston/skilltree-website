@@ -44,3 +44,25 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# GitHub Pages
+
+You can learn more in the [Create React App documentation](https://github.com/gitname/react-gh-pages)
+
+## Push the React app to the GitHub repository
+
+`$ npm run deploy -- -m "Deploy React app to GitHub Pages"`
+
+That will cause the predeploy and deploy scripts defined in package.json to run.
+
+Under the hood, the predeploy script will build a distributable version of the React app and store it in a folder named build. Then, the deploy script will push the contents of that folder to a new commit on the gh-pages branch of the GitHub repository, creating that branch if it doesn't already exist.
+
+## Store the React app's _source code_ on GitHub
+
+### Commit the changes you made while you were following this tutorial, to the `main` branch of the local Git repository; then, push that branch up to the `main` branch of the GitHub repository.
+
+    ```shell
+    $ git add .
+    $ git commit -m "Configure React app for deployment to GitHub Pages"
+    $ git push origin main
+    ``` 
