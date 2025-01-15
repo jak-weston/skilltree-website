@@ -8,8 +8,8 @@ import redHome from "./images/red-home-screen.png";
 function App() {
   return (
     <div className="App">
-      <FitBee qrImage={QR1} mockupImage={purpleHome} link={"https://docs.google.com/forms/d/e/1FAIpQLSerCnugvyEHpVKfFFnJYkFJ3XfDyJ4lEaUZC-j-AcxNtQ6pZA/viewform"} /> {/* Pass images as props */}
-      <FitBee qrImage={QR2} mockupImage={redHome} link={"https://docs.google.com/forms/d/e/1FAIpQLScl-8DE9oXmuOWI05_h7zFCP1INsQtsxDi6b6PtQu1NB1MQRg/viewform"} /> {/* Pass images as props */}
+      <FitBee qrImage={QR1} mockupImage={purpleHome} link={"https://docs.google.com/forms/d/e/1FAIpQLSerCnugvyEHpVKfFFnJYkFJ3XfDyJ4lEaUZC-j-AcxNtQ6pZA/viewform"} appColor="logo-placeholder" /> {/* Pass images as props */}
+      <FitBee qrImage={QR2} mockupImage={redHome} link={"https://docs.google.com/forms/d/e/1FAIpQLScl-8DE9oXmuOWI05_h7zFCP1INsQtsxDi6b6PtQu1NB1MQRg/viewform"} appColor="red-logo-placeholder" /> {/* Pass images as props */}
     </div>
   );
 }

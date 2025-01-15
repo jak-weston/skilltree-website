@@ -24,7 +24,10 @@
   
   .logo-placeholder {
     font-size: 4rem;
-    background-color: #1C1C21;
+    background-color: #7D27F5;
+    border-width: 3px;
+    border-color: #8548db; /* White with 70% transparency */
+    border-style: solid; /* Ensure the border is visible */
     width: 100px;
     height: 100px;
     margin: 0 auto;
@@ -34,7 +37,24 @@
     align-items: center;
     font-weight: bold;
     margin-bottom: 1rem;
-  }
+}
+
+.red-logo-placeholder {
+  font-size: 4rem;
+  background-color: #f52727;
+  border-width: 3px;
+  border-color: #ef6565; /* White with 70% transparency */
+  border-style: solid; /* Ensure the border is visible */
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 
   .app-name{
     font-family: 'Aldrich', sans-serif;
