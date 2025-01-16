@@ -22,18 +22,28 @@
     flex-wrap: wrap;
   }
   
-  .hiring-card {
-    width: 300px; /* Adjust width as per your design */
+.hiring-card {
+    width: 450px; /* Adjust width as per your design */
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  }
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hiring-card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
   
-  .hiring-card img {
-    width: 100%;
+.hiring-card img {
+    width: calc(100% - 20px); /* Adjust width to account for border */
     height: auto;
     display: block;
-  }
+    border-radius: 15px;
+    border: 10px solid #F0F2F6;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
   
   .hiring-footer {
     margin-top: 2rem;
@@ -49,7 +59,7 @@
     }
   
     .hiring-card {
-      width: 70%; /* Full width on smaller screens */
+      width: 80%; /* Full width on smaller screens */
     }
   }
   

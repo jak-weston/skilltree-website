@@ -16,12 +16,16 @@ const Hiring: React.FC = () => {
       <div className="hiring-cards">
         {/* UI/UX Internship */}
         <div className="hiring-card">
-          <img src={Application1} alt="UI/UX Internship" />
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSerCnugvyEHpVKfFFnJYkFJ3XfDyJ4lEaUZC-j-AcxNtQ6pZA/viewform" target="_blank" rel="noreferrer">
+                <img src={Application1} alt="Business Internship" />
+            </a>
         </div>
 
         {/* Business Internship */}
         <div className="hiring-card">
-          <img src={Application2} alt="Business Internship" />
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScl-8DE9oXmuOWI05_h7zFCP1INsQtsxDi6b6PtQu1NB1MQRg/viewform" target="_blank" rel="noreferrer">
+                <img src={Application2} alt="Business Internship" />
+            </a>
         </div>
       </div>
 

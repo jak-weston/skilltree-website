@@ -19,9 +19,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ddd;
+  background-color: #F0F2F6;
   border-radius: 20px;
-  padding-top: 40px;
+  padding-top: 25px;
 }
 
 .features-phone-placeholder {
