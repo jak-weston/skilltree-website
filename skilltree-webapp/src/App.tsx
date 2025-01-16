@@ -26,17 +26,13 @@ function App() {
     <div className="App">
       {currentHome === "purple" && (
         <FitBee
-          qrImage={QR1}
           mockupImage={purpleHome}
-          link="https://docs.google.com/forms/d/e/1FAIpQLSerCnugvyEHpVKfFFnJYkFJ3XfDyJ4lEaUZC-j-AcxNtQ6pZA/viewform"
           appColor="logo-placeholder"
         />
       )}
       {currentHome === "red" && (
         <FitBee
-          qrImage={QR2}
           mockupImage={redHome}
-          link="https://docs.google.com/forms/d/e/1FAIpQLScl-8DE9oXmuOWI05_h7zFCP1INsQtsxDi6b6PtQu1NB1MQRg/viewform"
           appColor="red-logo-placeholder"
         />
       )}

@@ -76,7 +76,7 @@
   font-size: 1.2rem;
   width: 1.5rem; /* Fixed width to ensure alignment */
   text-align: center; /* Centers the checkmark within its space */
-  margin-bottom: 5px;
+  margin-top: 0px;
 }
 
 .description {
