@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/skilltree-webapp/static/css/main.f855e6bc.css",
-    "main.js": "/skilltree-webapp/static/js/main.fb454b80.js",
+    "main.css": "/skilltree-webapp/static/css/main.795a724b.css",
+    "main.js": "/skilltree-webapp/static/js/main.521217fd.js",
     "static/js/488.d76d0447.chunk.js": "/skilltree-webapp/static/js/488.d76d0447.chunk.js",
-    "static/media/logo.svg": "/skilltree-webapp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/red-home-screen.png": "/skilltree-webapp/static/media/red-home-screen.4d4a88f0272132f94ff2.png",
+    "static/media/purple-home-screen.png": "/skilltree-webapp/static/media/purple-home-screen.66b97e6edbc52f482591.png",
+    "static/media/Achievements.png": "/skilltree-webapp/static/media/Achievements.76e62303acf2f89602d0.png",
+    "static/media/Challenge.png": "/skilltree-webapp/static/media/Challenge.4ef50e15e93054c9a3c6.png",
+    "static/media/Streak.png": "/skilltree-webapp/static/media/Streak.60599b84da2f7e23fea1.png",
+    "static/media/Home.png": "/skilltree-webapp/static/media/Home.c80356919a63e5740949.png",
+    "static/media/UIUX_Application.png": "/skilltree-webapp/static/media/UIUX_Application.ff8c865aefa61d81ca65.png",
+    "static/media/Business_Application.png": "/skilltree-webapp/static/media/Business_Application.9e12e3d281b8c6c0b64c.png",
+    "static/media/iphone-app-store-coming-soon.jpg": "/skilltree-webapp/static/media/iphone-app-store-coming-soon.ab20d7561363a52d403a.jpg",
+    "static/media/KPro_Logo.png": "/skilltree-webapp/static/media/KPro_Logo.f883774b8e121c2d8984.png",
     "index.html": "/skilltree-webapp/index.html",
-    "main.f855e6bc.css.map": "/skilltree-webapp/static/css/main.f855e6bc.css.map",
-    "main.fb454b80.js.map": "/skilltree-webapp/static/js/main.fb454b80.js.map",
+    "main.795a724b.css.map": "/skilltree-webapp/static/css/main.795a724b.css.map",
+    "main.521217fd.js.map": "/skilltree-webapp/static/js/main.521217fd.js.map",
     "488.d76d0447.chunk.js.map": "/skilltree-webapp/static/js/488.d76d0447.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.fb454b80.js"
+    "static/css/main.795a724b.css",
+    "static/js/main.521217fd.js"
   ]
 }
