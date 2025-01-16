@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/skilltree-webapp/static/css/main.795a724b.css",
-    "main.js": "/skilltree-webapp/static/js/main.521217fd.js",
+    "main.css": "/skilltree-webapp/static/css/main.1791201c.css",
+    "main.js": "/skilltree-webapp/static/js/main.76602cd1.js",
     "static/js/488.d76d0447.chunk.js": "/skilltree-webapp/static/js/488.d76d0447.chunk.js",
     "static/media/red-home-screen.png": "/skilltree-webapp/static/media/red-home-screen.4d4a88f0272132f94ff2.png",
     "static/media/purple-home-screen.png": "/skilltree-webapp/static/media/purple-home-screen.66b97e6edbc52f482591.png",
@@ -14,12 +14,12 @@
     "static/media/iphone-app-store-coming-soon.jpg": "/skilltree-webapp/static/media/iphone-app-store-coming-soon.ab20d7561363a52d403a.jpg",
     "static/media/KPro_Logo.png": "/skilltree-webapp/static/media/KPro_Logo.f883774b8e121c2d8984.png",
     "index.html": "/skilltree-webapp/index.html",
-    "main.795a724b.css.map": "/skilltree-webapp/static/css/main.795a724b.css.map",
-    "main.521217fd.js.map": "/skilltree-webapp/static/js/main.521217fd.js.map",
+    "main.1791201c.css.map": "/skilltree-webapp/static/css/main.1791201c.css.map",
+    "main.76602cd1.js.map": "/skilltree-webapp/static/js/main.76602cd1.js.map",
     "488.d76d0447.chunk.js.map": "/skilltree-webapp/static/js/488.d76d0447.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.795a724b.css",
-    "static/js/main.521217fd.js"
+    "static/css/main.1791201c.css",
+    "static/js/main.76602cd1.js"
   ]
 }
