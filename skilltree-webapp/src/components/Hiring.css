@@ -1,0 +1,55 @@
+.hiring-container {
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .hiring-header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  .hiring-header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .hiring-cards {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .hiring-card {
+    width: 300px; /* Adjust width as per your design */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hiring-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .hiring-footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hiring-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hiring-card {
+      width: 70%; /* Full width on smaller screens */
+    }
+  }
+  

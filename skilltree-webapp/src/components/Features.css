@@ -13,20 +13,22 @@
 }
 
 /* Phone Section */
-.phone-section {
+.features-phone-section {
   flex: 1;
   max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ddd;
+  border-radius: 20px;
+  padding-top: 40px;
 }
 
 .features-phone-placeholder {
   width: 310px;
   height: 400px;
   box-sizing: content-box;
-  border-radius: 20px;
-  background-color: rgb(223, 223, 223);
+  border-top: 20px;
 }
 
 /* Content Section */
@@ -81,7 +83,7 @@
 
 .description {
   font-size: 1rem;
-  font-family: 'Aldrich', sans-serif;
+  font-family: 'Kanit', sans-serif;
   text-align: left; /* Align the text properly */
   padding: 10px;
 }

@@ -13,7 +13,7 @@
 .featured-logos {
   display: flex;
   flex-wrap: wrap; /* Enable wrapping */
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 2rem;
 }
 
@@ -21,12 +21,23 @@
   max-width: 100%;
   height: auto; /* Ensures images retain aspect ratio */
   object-fit: contain; /* Ensures images are not distorted */
-  flex: 1 1 calc(15% - 1rem); /* Take 50% of the row minus gap spacing */
-  max-width: calc(15% - 1rem); /* Enforce 50% max width */
+  flex: 1 1 calc(20% - 1rem); /* Adjust the flex-basis to 20% */
+  max-width: calc(20% - 1rem); /* Enforce 20% max width */
+}
+
+@media (max-width: 1024px) {
+  .featured-logo {
+    flex: 1 1 calc(25% - 1rem); /* Adjust the flex-basis to 25% */
+    max-width: calc(25% - 1rem); /* Enforce 25% max width */
+  }
 }
 
 @media (max-width: 768px) {
   .featured-logos {
-    gap: 1rem; /* Reduce spacing for smaller screens */
+    gap: 4rem; /* Reduce spacing for smaller screens */
+  }
+  .featured-logo {
+    flex: 1 1 calc(70% - 1rem); /* Adjust the flex-basis to 50% */
+    max-width: calc(70% - 1rem); /* Enforce 50% max width */
   }
 }

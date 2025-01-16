@@ -1,0 +1,88 @@
+.premium-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.premium-main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 30px;
+  padding: 3%;
+  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #f8c047 30%, #eeb634 40%, transparent 80%),
+  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #f1ce6e 25%, #c49c3f 62.5%, #d09816 100%);
+  padding-right: 5%;
+}
+
+/* Left Section: Title and Subtitle */
+.premium-text-section {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.title {
+  font-family: 'Kanit', sans-serif;
+  margin: 1rem 0;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.subtext {
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+/* Right Section: Feature Descriptions */
+.premium-feature-section {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.feature-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center; /* Align checkmarks and text vertically */
+  gap: 0.5rem;
+}
+
+.checkmark {
+  font-size: 1.2rem;
+  width: 1.5rem; /* Fixed width to ensure alignment */
+  margin-top: 6px;
+  text-align: center; /* Centers the checkmark within its space */
+}
+
+.description {
+  font-size: 1rem;
+  font-family: 'Kanit', sans-serif;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .premium-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .premium-text-section,
+  .premium-feature-section {
+    max-width: 100%;
+  }
+}

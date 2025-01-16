@@ -8,7 +8,7 @@ const Featured = ({ Position, Title, Subtext, FeatureDiscriptionArray, mockupIma
         <div className={`fitbee-container ${Position}`}>
             <div className="fitbee-main">
                 {/* Phone Image */}
-                <div className="phone-section">
+                <div className="features-phone-section">
                     <img className="features-phone-placeholder" src={mockupImage} alt="Phone Mockup" />
                 </div>
                 
