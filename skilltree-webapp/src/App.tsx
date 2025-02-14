@@ -11,6 +11,7 @@ import Achievement from './images/Achievements.png';
 import Premium from "./components/Premium.tsx";
 import Hiring from "./components/Hiring.tsx";
 import Footer from "./components/Footer.tsx";
+import BetaTest from "./components/BetaTest.tsx";
 
 
 const Skills: string[] = ["Intuitive Skill Progressions", "AI Workout Camera Trainer", "Tailored to Your Abilities", "Over +50 Skills to Choose From"];
@@ -75,7 +76,7 @@ function App() {
 
       <Premium />
 
-      <Hiring />
+      <BetaTest />
 
       <Footer />
     </div>

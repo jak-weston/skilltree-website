@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <p className="name">Spandan Das</p>
           <p className="role">Co–Founder</p>
         </div>
-        <a className="email" href="mailto:spdas@ucsd.edu" className="email">spdas@ucsd.edu</a>
+        <a className="email" href="mailto:spdas@ucsd.edu">spdas@ucsd.edu</a>
 
 
         {/* Divider */}
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
           <p className="name">Jack Weston</p>
           <p className="role">Co–Founder</p>
         </div>
-        <a className="email" href="mailto:jweston@ucsd.edu" className="email">jweston@ucsd.edu</a>
+        <a className="email" href="mailto:jweston@ucsd.edu">jweston@ucsd.edu</a>
       </div>
     </footer>
   );
