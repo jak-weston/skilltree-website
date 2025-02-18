@@ -12,6 +12,8 @@ import Premium from "./components/Premium.tsx";
 import Hiring from "./components/Hiring.tsx";
 import Footer from "./components/Footer.tsx";
 import BetaTest from "./components/BetaTest.tsx";
+import Anniversary from "./components/Anniversary.tsx";
+import Hiring2 from "./components/Hiring2.tsx";
 
 
 const Skills: string[] = ["Intuitive Skill Progressions", "AI Workout Camera Trainer", "Tailored to Your Abilities", "Over +50 Skills to Choose From"];

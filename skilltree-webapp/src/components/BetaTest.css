@@ -1,6 +1,14 @@
-.beta-test-container {
+.beta-test-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+  .beta-test-container {
     max-width: 400px;
-    margin: auto;
+    width: 45%; /* Ensures two forms fit side by side */
     margin-bottom: 50px;
     margin-top: 20px;
     padding: 20px;
