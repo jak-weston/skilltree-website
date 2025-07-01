@@ -1,14 +1,51 @@
 import { HomeCopy as copy } from "@/content";
+import Features from "@/sections/Features";
+import Benefits from "@/sections/Benefits";
+import Explanation from "@/sections/Explanation";
+import Demo from "@/sections/Demo";
+import Testimonials from "@/sections/Testimonials";
+import Pricing from "@/sections/Pricing";
+import FAQ from "@/sections/FAQ";
+import FinalCTA from "@/sections/FinalCTA";
+import { Navbar } from "@/components/Navbar";
+import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>{copy.hero.header}</h1>
-        <p>{copy.hero.subheader}</p>
+    <div className="font-sans">
+      <main className="flex flex-col">
+        <Navbar />
+        {/* Landing Section with Clipped BG */}
+        <div className="w-full h-[78vh] relative overflow-hidden flex items-center justify-center flex-col gap-3 border-b border-border border-solid px-4">
+          {/* Background inside, positioned absolutely */}
+          <div className="bg-scroll-left" />
+          <h1 className="max-w-2xl text-center text-5xl z-10">
+            {/* {copy.hero.header} */}
+            Move Better. Train Smarter. Progress with <i>Purpose.</i>
+          </h1>
+          <p className="max-w-xl text-center z-10 text-lg">
+            {copy.hero.subheader}
+          </p>
+          <div className="inline-flex gap-2 items-center z-10">
+            <Button>Download</Button>
+            <Button variant={"secondary"}>Learn More</Button>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4">
+          <Features />
+          <Benefits />
+          <Explanation />
+          <Demo />
+          <Testimonials />
+          <Pricing />
+          <FAQ />
+          <FinalCTA />
+        </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        {copy.footer.copyright}
-      </footer>
+
+      <Footer />
     </div>
   );
 }

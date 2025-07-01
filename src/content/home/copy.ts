@@ -1,43 +1,51 @@
 /// Copy for the homepage landing
 const HomeCopy = {
   hero: {
-    header: "Train Smarter. Move Better. Progress with Purpose.",
+    // header: "Move Better.<br/>Train Smarter.<br/>Progress with Purpose.",
+    // header: "Move Better. Train Smarter. Progress with Purpose.",
     subheader:
       "Skilltree is your adaptive calisthenics coach — guiding you through a clear, skill-based journey that builds real strength, improves form, and keeps you moving forward.",
     cta: ["Try Your First Skill Path Free", "See How It Works"],
   },
   features: {
-    header: "A Smarter Way to Train — Backed by Structure, Safety, and Science",
+    header: "A Smarter Way to Train",
+    subheader: "Progress and perform at your best using Skilltree.",
     items: [
       {
         title: "Skill Trees for Every Goal",
         description:
           "Know exactly what to work on next, with step-by-step progressions toward skills like push-ups, handstands, and muscle-ups.",
+        color: "green",
       },
       {
         title: "AI-Guided Trainer",
         description:
           "Get real-time cues to improve form and reduce injury risk — even if you're just getting started.",
+        color: "orange",
       },
       {
         title: "Progressive Strength Levels",
         description:
           "From your first push-up to your first planche — we meet you where you're at and keep the challenge growing.",
+        color: "purple",
       },
       {
         title: "Workout Logging & Progress Tracking",
         description:
           "Visualize your gains. Track reps, consistency, and new skills unlocked.",
+        color: "red",
       },
       {
         title: "Smart Recommendations",
         description:
           "Our system adapts to your progress and preferences to keep training fresh and effective.",
+        color: "blue",
       },
       {
         title: "Built-in Community Support",
         description:
           "Get inspired by others on your path, share wins, and stay accountable.",
+        color: "yellow",
       },
     ],
   },
@@ -55,7 +63,7 @@ const HomeCopy = {
       "Your body is your gym. We’re your guide.",
     ],
   },
-  howItWorks: {
+  example: {
     header: "Start Your Journey in 3 Simple Steps",
     steps: [
       {
