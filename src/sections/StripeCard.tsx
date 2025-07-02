@@ -6,7 +6,7 @@ interface StripeCardProps {
 }
 
 export default function StripeCard({ color, children }: StripeCardProps) {
-  const bgVar = `--color-sk-${color}`;
+  // const bgVar = `--color-sk-${color}`;
   const lightBgVar = `--color-sk-${color}-light`;
 
   return (
