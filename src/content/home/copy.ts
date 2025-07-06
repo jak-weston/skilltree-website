@@ -15,48 +15,68 @@ const HomeCopy = {
         title: "Skill Trees for Every Goal",
         description:
           "Know exactly what to work on next, with step-by-step progressions toward skills like push-ups, handstands, and muscle-ups.",
-        color: "green",
+        color: "purple",
       },
       {
         title: "AI-Guided Trainer",
         description:
           "Get real-time cues to improve form and reduce injury risk — even if you're just getting started.",
-        color: "orange",
+        color: "green",
       },
       {
         title: "Progressive Strength Levels",
         description:
           "From your first push-up to your first planche — we meet you where you're at and keep the challenge growing.",
-        color: "purple",
+        color: "orange",
       },
       {
         title: "Workout Logging & Progress Tracking",
         description:
           "Visualize your gains. Track reps, consistency, and new skills unlocked.",
-        color: "red",
+        color: "yellow",
       },
       {
         title: "Smart Recommendations",
         description:
           "Our system adapts to your progress and preferences to keep training fresh and effective.",
-        color: "blue",
+        color: "red",
       },
       {
         title: "Built-in Community Support",
         description:
           "Get inspired by others on your path, share wins, and stay accountable.",
-        color: "yellow",
+        color: "blue",
       },
     ],
   },
   benefits: {
     header: "Train With Confidence — Not Confusion",
     items: [
-      "No more guesswork — clear plans show you exactly how to progress",
-      "Learn proper form with AI guidance to avoid injury and build lasting strength",
-      "Skip the gym intimidation — train anywhere, at your pace",
-      "Save time with efficient, targeted workouts designed for skill mastery",
-      "Gain confidence with every rep — and impress your friends along the way",
+      {
+        title: "Clear Progression",
+        description:
+          "No more guesswork — follow structured plans that show the way.",
+      },
+      {
+        title: "AI-Powered Form",
+        description:
+          "Learn proper technique to stay safe and build real strength.",
+      },
+      {
+        title: "Train Anywhere",
+        description:
+          "No gym? No problem. Work out on your terms, at your pace.",
+      },
+      {
+        title: "Efficient Workouts",
+        description:
+          "Maximize results with focused sessions that build real skill.",
+      },
+      {
+        title: "Rep With Confidence",
+        description:
+          "Build strength, own your progress — and turn heads doing it.",
+      },
     ],
     taglines: [
       "Progress is addictive.",
