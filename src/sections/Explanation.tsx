@@ -8,6 +8,8 @@ export default function Expanation() {
       id="explanation"
       className="spacing-section w-full flex flex-col justify-center items-center "
     >
+      <span className="chip">Setup</span>
+
       <h2>{copy.example.header}</h2>
       <div className="flex flex-row gap-2 text-lg">
         {copy.benefits.taglines.map((tag) => (
@@ -15,15 +17,12 @@ export default function Expanation() {
         ))}
       </div>
 
-      <ul className="flex flex-col md:grid grid-cols-3 gap-3 mt-4">
+      <ul className="flex flex-col md:grid grid-cols-3 gap-6 mt-4">
         {copy.example.steps.map((step, index) => (
-          <li
-            className="cols-span-1 p-4 md:p-6 rounded-lg relative"
-            key={step.title}
-          >
+          <li className="cols-span-1 rounded-lg relative" key={step.title}>
             <div
               className={cn(
-                "absolute top-1.5 left-1.5 bg-secondary border-[2px] border-solid border-border rounded-full  text-secondary-foreground shadow-xs hover:bg-sk-blue hover:text-primary-foreground cursor-pointer h-10 w-10 flex items-center justify-center",
+                "absolute top-1.5 left-1.5 bg-secondary border-[2px] border-solid border-border rounded-full  text-secondary-foreground shadow-xs hover:bg-sk-blue hover:text-primary-foreground cursor-pointer h-10 w-10 flex items-center justify-center"
               )}
             >
               <span>{index + 1}</span>
@@ -33,7 +32,7 @@ export default function Expanation() {
               Image Placeholder
             </div>
 
-            <h3 className="mt-3 ">{step.title}</h3>
+            <h3 className="mt-3">{step.title}</h3>
             <p>{step.description}</p>
           </li>
         ))}

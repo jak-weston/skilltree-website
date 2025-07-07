@@ -56,8 +56,8 @@
   --color-sk-green-light: oklch(0.6837 0.1403 158.38);
 
   --color-sk-yellow: oklch(0.8487 0.1731 88.14);
-  --color-sk-yellow-light: oklch(0.8608 0.1714 90.48);
-
+  /* --color-sk-yellow-light: oklch(0.8608 0.1714 90.48); */
+  --color-sk-yellow-light: oklch(0.9067 0.188185 99.4709);
   --color-sk-orange: oklch(0.7521 0.1594 60.34);
   --color-sk-orange-light: oklch(0.7904 0.1521 62.04);
 
@@ -147,16 +147,20 @@
   --color-sk-purple-light: oklch(0.6743 0.2043 300.14);
 
   --color-sk-red: oklch(0.6357 0.1916 24.39);
-  --color-sk-red-light: oklch(0.6602 0.1753 23.18);
+  --color-sk-red-light: oklch(0.7176 0.1753 23.18);
 
   --color-sk-green: oklch(0.655 0.1505 156.38);
-  --color-sk-green-light: oklch(0.6837 0.1403 158.38);
+  /* --color-sk-green-light: oklch(0.6837 0.1403 158.38); */
+  --color-sk-green-light: oklch(0.773 0.1403 158.38);
 
   --color-sk-yellow: oklch(0.8487 0.1731 88.14);
-  --color-sk-yellow-light: oklch(0.8608 0.1714 90.48);
+  --color-sk-yellow-light: oklch(0.8608 0.1714 99.48);
+
+  /* --color-sk-yellow-light: oklch(0.9067 0.188185 99.4709); */
 
   --color-sk-orange: oklch(0.7521 0.1594 60.34);
-  --color-sk-orange-light: oklch(0.7904 0.1521 62.04);
+  /* --color-sk-orange-light: oklch(0.7904 0.1521 62.04); */
+  --color-sk-orange-light: oklch(0.8264 0.1521 62.04);
 
   --color-sk-blue: oklch(0.7275 0.154255 242.7431);
   --color-sk-blue-light: oklch(0.8028 0.118 234.06);
@@ -182,7 +186,7 @@
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --border: #ffffff1a;
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
   --chart-1: oklch(0.488 0.243 264.376);
@@ -207,6 +211,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .chip {
+    @apply flex items-center justify-center px-3 py-1.5 border-border border rounded-full text-xs w-fit font-semibold  bg-secondary my-2;
+  }
 }
 html {
   scroll-behaviour: smooth;
@@ -223,6 +231,10 @@ html {
 @layer utilities {
   .spacing-section {
     @apply pt-16 md:pt-24 lg:pt-32;
+  }
+
+  .spacing-section-vertical {
+    @apply py-16 md:py-24 lg:py-32;
   }
 }
 
@@ -250,4 +262,20 @@ html {
   pointer-events: none;
   transform: translateY(5%) rotate(-8deg) scale(1.25);
   overflow: hidden;
+}
+
+@keyframes sinusoidal {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-sinusoidal {
+  animation: sinusoidal 3s infinite ease-in-out;
 }

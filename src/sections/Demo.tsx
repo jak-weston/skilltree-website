@@ -3,12 +3,15 @@ export default function Demo() {
   return (
     <section
       id="demo"
-      className="w-full flex  flex-col items-center justify-center spacing-section"
+      className="w-full flex flex-col items-center justify-center spacing-section"
     >
+      <span className="chip">Demo</span>
       <h2>{copy.demo.header}</h2>
-      <p>{copy.demo.subheader}</p>
+      <p className="mb-3">{copy.demo.subheader}</p>
 
-      <div className="rounded-xl border border-solid border-background aspect-video bg-purple-300 w-lg"></div>
+      <div className="flex w-full container mt-4 aspect-video rounded-md bg-gradient-to-tr from-primary/20 to-primary/5 items-center  justify-center">
+        [YouTube Video Demo]
+      </div>
     </section>
   );
 }

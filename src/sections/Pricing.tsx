@@ -9,6 +9,7 @@ export default function Pricing() {
       id="pricing"
       className="w-full flex flex-col items-center justify-center spacing-section"
     >
+      <span className="chip">Pricing</span>
       <h2>{header}</h2>
 
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-4xl mt-6">
