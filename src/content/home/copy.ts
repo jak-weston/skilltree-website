@@ -16,41 +16,48 @@ const HomeCopy = {
         description:
           "Know exactly what to work on next, with step-by-step progressions toward skills like push-ups, handstands, and muscle-ups.",
         color: "purple",
+        img: "tree.svg",
       },
       {
         title: "AI-Guided Trainer",
         description:
           "Get real-time cues to improve form and reduce injury risk — even if you're just getting started.",
         color: "green",
+        img: "tree.svg",
       },
       {
         title: "Progressive Strength Levels",
         description:
           "From your first push-up to your first planche — we meet you where you're at and keep the challenge growing.",
         color: "orange",
+        img: "tree.svg",
       },
       {
         title: "Workout Logging & Progress Tracking",
         description:
           "Visualize your gains. Track reps, consistency, and new skills unlocked.",
         color: "yellow",
+        img: "tree.svg",
       },
       {
         title: "Smart Recommendations",
         description:
           "Our system adapts to your progress and preferences to keep training fresh and effective.",
         color: "red",
+        img: "tree.svg",
       },
       {
         title: "Built-in Community Support",
         description:
           "Get inspired by others on your path, share wins, and stay accountable.",
         color: "blue",
+        img: "tree.svg",
       },
     ],
   },
   benefits: {
     header: "Train With Confidence — Not Confusion",
+    subheader: "Learn how to make Skilltree work for you.",
     items: [
       {
         title: "Clear Progression",
@@ -108,22 +115,53 @@ const HomeCopy = {
     screenshots: ["skill-tree", "workout-log", "video-demo", "user-profile"],
   },
   testimonials: {
-    header: "What Our Users Are Saying",
+    header: "What People Are Saying",
+    subheader:
+      "Don't just take it from us. See what people think of our product.",
     quotes: [
       {
         text: "Before Skilltree, I didn’t know where to start. Now I feel confident every time I train.",
         author: "Rachel L., beginner",
+        rating: 5,
       },
       {
         text: "I’ve made more progress in 3 months than I did in a year at the gym.",
         author: "Tomas K., intermediate",
+        rating: 5,
       },
       {
         text: "The AI trainer gives me peace of mind — I know I’m doing things right.",
         author: "Jordan W., beginner",
+        rating: 5,
+      },
+      {
+        text: "The workouts adapt to me. I don’t have to think — just show up and train. It’s been a huge time-saver and completely removed the mental friction that used to come with working out.",
+        author: "Monica D., busy professional",
+        rating: 5,
+      },
+      {
+        text: "It’s like having a personal coach in my pocket. The program adjusts to how I’m feeling, tracks my progress automatically, and pushes me just the right amount — it’s honestly smarter than some human coaches I’ve had.",
+        author: "Derek F., returning lifter",
+        rating: 5,
+      },
+      {
+        text: "The progress tracking keeps me motivated — I can actually *see* how far I’ve come, which makes it way easier to stay consistent. I check my metrics more than I check social media now.",
+        author: "Ali P., goal-oriented",
+        rating: 4,
+      },
+      {
+        text: "No fluff, no confusion. Just a clear path forward every session. Every time I open the app, I know exactly what to do, and I can feel the results week to week.",
+        author: "Jessie M., minimalist",
+        rating: 5,
+      },
+      {
+        text: "Skilltree helped me finally stay consistent. That’s what changed everything. I used to jump from one program to another, always second-guessing. Now I trust the plan and stick with it.",
+        author: "Victor R., formerly inconsistent",
+        rating: 5,
       },
     ],
   },
+
   pricing: {
     header: "Flexible Plans for Every Athlete",
     plans: {
