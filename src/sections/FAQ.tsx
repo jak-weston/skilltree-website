@@ -8,15 +8,16 @@ export default function FAQ() {
 
   const toggleIndex = (index: number) => {
     setSelected((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
 
   return (
     <section
       id="faq"
-      className=" w-full flex justify-center flex-col spacing-section"
+      className=" w-full flex justify-center flex-col  items-center spacing-section-vertical"
     >
+      <span className="chip">FAQ</span>
       <h2 className="text-center mb-2 mx-3">Frequently asked questions</h2>
       <div className="max-w-md md:max-w-lg lg:max-w-xl w-full mx-auto">
         {copy.faq.items.map((q, index) => {
@@ -36,7 +37,7 @@ export default function FAQ() {
                   )}
                 </div>
                 {expanded && (
-                  <p className="pt-3 text-sm p-m md:px-0">{q.answer}</p>
+                  <p className="pt-3 text-md p-m md:px-0">{q.answer}</p>
                 )}
               </div>
 
