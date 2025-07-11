@@ -40,8 +40,8 @@ export default function Home() {
           <Demo />
           <Testimonials />
           <Pricing />
-          <FinalCTA />
           <FAQ />
+          <FinalCTA />
         </div>
       </main>
 

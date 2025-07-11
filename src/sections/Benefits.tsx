@@ -59,7 +59,7 @@ export default function Benefits() {
             style={{
               boxShadow: "6px 9px 0 0 #ffffff1a",
             }}
-            className="relative z-10 w-[300px] rotate-[15deg] -skew-y-[7deg] md:w-80 transform hover:scale-[0.91] scale-90 hover:rotate-x-5 hover:animate-sinusoidal shadow-xl shadow-secondary border-4 border-solid border-border rounded-4xl hover:-translate-y-2 hover:shadow-primary/10 transition-all duration-300"
+            className="relative z-10 w-[300px] rotate-[15deg] -skew-y-[7deg] md:w-80 transform hover:scale-[0.91] scale-90 hover:rotate-x-5 animate-sinusoidal shadow-xl shadow-secondary border-4 border-solid border-border rounded-4xl hover:-translate-y-2 hover:shadow-primary/10 transition-all duration-300"
             width={600}
             height={800}
           />

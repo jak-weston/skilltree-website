@@ -24,12 +24,14 @@ export default function FAQ() {
           const expanded = selected.includes(index);
           return (
             <div key={q.question} className="">
-              <div className="flex flex-col py-5 ">
+              <div className="flex flex-col py-5">
                 <div
-                  className="flex flex-row items-center justify-between w-full cursor-pointer p-m md:px-0"
+                  className="flex flex-row items-center justify-between w-full cursor-pointer p-m md:px-0  group"
                   onClick={() => toggleIndex(index)}
                 >
-                  <h6 className="font-sans">{q.question}</h6>
+                  <h6 className="font-sans group-hover:underline">
+                    {q.question}
+                  </h6>
                   {expanded ? (
                     <LucideMinus className="text-primary" size={16} />
                   ) : (

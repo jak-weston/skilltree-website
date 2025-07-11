@@ -53,30 +53,30 @@ const navItems = [
       },
     ],
   },
-  {
-    href: "",
-    label: "Product",
-    children: [
-      {
-        href: "/c/upload",
-        label: "Create",
-        icon: FaPlus,
-        desc: "Create a new website",
-      },
-      {
-        href: "/dashboard",
-        label: "Dashboard",
-        icon: MdSpaceDashboard,
-        desc: "Manage existing websites",
-      },
-      {
-        href: "/billing",
-        label: "Billing",
-        icon: FaCreditCard,
-        desc: "Manage billing information",
-      },
-    ],
-  },
+  // {
+  //   href: "",
+  //   label: "Product",
+  //   children: [
+  //     {
+  //       href: "/c/upload",
+  //       label: "Create",
+  //       icon: FaPlus,
+  //       desc: "Create a new website",
+  //     },
+  //     {
+  //       href: "/dashboard",
+  //       label: "Dashboard",
+  //       icon: MdSpaceDashboard,
+  //       desc: "Manage existing websites",
+  //     },
+  //     {
+  //       href: "/billing",
+  //       label: "Billing",
+  //       icon: FaCreditCard,
+  //       desc: "Manage billing information",
+  //     },
+  //   ],
+  // },
 
   { href: "/pricing", label: "Pricing" },
 ];
@@ -84,7 +84,7 @@ const navItems = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState<string | undefined>(
-    undefined,
+    undefined
   );
 
   const [hoverID, setHoverID] = useState("");
@@ -153,7 +153,7 @@ export function Navbar() {
                       }}
                       className="flex flex-col shadow-lg items-center justify-start gap-1 p-2 absolute top-[150%] left-[-110px] z-50 bg-background border border-solid border-border rounded-2xl mt-1.5  w-[300px]"
                     >
-                      {item.children.map((item, index) => (
+                      {item.children.map((item) => (
                         <motion.a
                           key={item.href}
                           href={item.href}
@@ -163,14 +163,13 @@ export function Navbar() {
                           transition={{
                             type: "spring",
                             stiffness: 300,
-                            damping: 20,
-                            delay: index * 0.05,
+                            damping: 30,
                           }}
                           className="group relative text-md font-body transition-colors hover:text-primary py-2 hover:bg-secondary/80 w-full mx-2 rounded-xl px-2.5 group/icon"
                           onClick={() => setIsOpen(false)}
                         >
                           <div className="flex flex-row justify-start items-center gap-3 ">
-                            <div className="p-2 rounded-md bg-secondary/80 border border-border border-solid group-hover/icon:text-sk-blue transition-all">
+                            <div className="p-2 rounded-md bg-secondary/80 border border-border border-solid group-hover/icon:text-accent transition-all">
                               <item.icon className="h-5 w-5"></item.icon>
                             </div>
                             <div className="flex flex-col">
@@ -184,7 +183,7 @@ export function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
-            ),
+            )
           )}
         </div>
 
@@ -263,7 +262,7 @@ export function Navbar() {
                             setSelectedLink(
                               item.label === selectedLink
                                 ? undefined
-                                : item.label,
+                                : item.label
                             )
                           }
                         >
