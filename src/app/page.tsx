@@ -10,6 +10,7 @@ import FinalCTA from "@/sections/FinalCTA";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import BetaTestSection from "@/components/BetaTestSignUp";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
           <Pricing />
           <FAQ />
           <FinalCTA />
+          <BetaTestSection />
         </div>
       </main>
 
