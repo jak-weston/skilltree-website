@@ -7,9 +7,8 @@ import ClickAwayListener from "react-click-away-listener";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { useState } from "react";
-import { MdSpaceDashboard } from "react-icons/md";
-import { FaBrush, FaPlus, FaShieldHalved } from "react-icons/fa6";
-import { FaCreditCard, FaLaptop, FaRoad, FaRocket } from "react-icons/fa";
+import { FaBrush, FaShieldHalved } from "react-icons/fa6";
+import { FaLaptop, FaRoad, FaRocket } from "react-icons/fa";
 import SkLogo from "./SkLogo";
 
 const navItems = [
