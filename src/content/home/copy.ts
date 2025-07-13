@@ -63,26 +63,30 @@ const HomeCopy = {
         title: "Clear Progression",
         description:
           "No more guesswork — follow structured plans that show the way.",
+        image: "tree.svg",
       },
       {
         title: "AI-Powered Form",
         description:
           "Learn proper technique to stay safe and build real strength.",
+        image: "ai.svg",
       },
       {
-        title: "Train Anywhere",
-        description:
-          "No gym? No problem. Work out on your terms, at your pace.",
+        title: "Compete with Friends",
+        description: "Challenge your friends to AI-powered duels.",
+        image: "compete.svg",
       },
       {
         title: "Efficient Workouts",
         description:
           "Maximize results with focused sessions that build real skill.",
+        image: "progression.png",
       },
       {
         title: "Rep With Confidence",
         description:
           "Build strength, own your progress — and turn heads doing it.",
+        image: "progress.svg",
       },
     ],
     taglines: [
