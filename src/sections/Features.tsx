@@ -1,5 +1,4 @@
 import { HomeCopy as copy } from "@/content";
-import { rgba } from "motion";
 
 export default function Features() {
   return (
