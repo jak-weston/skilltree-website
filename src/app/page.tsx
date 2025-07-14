@@ -18,14 +18,13 @@ export default function Home() {
       <main className="flex flex-col">
         <Navbar />
         {/* Landing Section with Clipped BG */}
-        <div className="w-full h-[78vh] relative overflow-hidden flex items-center justify-center flex-col gap-3 border-b border-border border-solid px-4">
+        <div className="w-full h-[78vh] relative overflow-hidden flex items-center justify-center flex-col gap-3 border-b border-border border-solid px-4 text-white">
           {/* Background inside, positioned absolutely */}
           <div className="bg-scroll-left" />
-          <h1 className="max-w-2xl text-center text-5xl z-10">
-            {/* {copy.hero.header} */}
+          <h1 className="max-w-2xl text-center text-5xl z-10 ">
             Move Better. Train Smarter. Progress with <i>Purpose.</i>
           </h1>
-          <p className="max-w-xl text-center z-10 text-lg">
+          <p className="max-w-xl text-center z-10 text-lg text-white/95">
             {copy.hero.subheader}
           </p>
           <div className="inline-flex gap-2 items-center z-10">
@@ -41,9 +40,9 @@ export default function Home() {
           <Testimonials />
           <Demo />
           <Pricing />
-          <FAQ />
-          <FinalCTA />
           <BetaTestSection />
+          <FinalCTA />
+          <FAQ />
         </div>
       </main>
 
