@@ -7,7 +7,7 @@ import ClickAwayListener from "react-click-away-listener";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { useState } from "react";
-import { FaShieldHalved, FaStar, FaUsers } from "react-icons/fa6";
+import { FaB, FaShieldHalved, FaStar, FaUsers } from "react-icons/fa6";
 import { FaLaptop, FaQuestionCircle, FaRocket } from "react-icons/fa";
 import SkLogo from "./SkLogo";
 
@@ -36,9 +36,9 @@ const navItems = [
       },
       {
         href: "/#collaborate",
-        label: "Collaborate",
-        icon: FaUsers,
-        desc: "Join our community or team",
+        label: "Join the Beta",
+        icon: FaB,
+        desc: "Give Skilltree feedback",
       },
       {
         href: "/#faq",

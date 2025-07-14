@@ -103,7 +103,11 @@ const BetaTest: React.FC = () => {
           </Select>
         </label>
 
-        <Button type="submit" variant="ghost">
+        <Button
+          type="submit"
+          variant="secondary"
+          className="border border-border"
+        >
           Submit
         </Button>
       </form>
@@ -210,7 +214,11 @@ const HiringForm: React.FC = () => {
           </Select>
         </label>
 
-        <Button type="submit" variant="ghost">
+        <Button
+          type="submit"
+          variant="secondary"
+          className="border border-border"
+        >
           Submit
         </Button>
       </form>
@@ -224,11 +232,11 @@ const BetaTestSection: React.FC = () => {
       className="flex items-center justify-center flex-col my-16 spacing-section"
       id="collaborate"
     >
-      <span className="chip">Collaborate</span>
+      <span className="chip">Join the Beta</span>
 
       <div className="container mx-auto  flex flex-col md:flex-row items-center justify-center gap-8">
         <BetaTest />
-        <HiringForm />
+        {/* <HiringForm /> */}
       </div>
     </div>
   );
