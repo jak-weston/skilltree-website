@@ -21,7 +21,7 @@ export default function Features() {
                   backgroundColor: `var(${bgVar})`,
                   borderColor: `var(${bgVar})`,
                 }}
-                className={`text-white overflow-hidden rounded-xl border-8 inset-8 w-full md:max-w-xl flex-shrink-0 p-4 py-6 md:p-6 md:py-8 group relative ${bgVar}`}
+                className={`text-white overflow-hidden rounded-xl border-8 w-full md:max-w-xl flex-shrink-0 p-4 py-6 md:p-6 md:py-8 group relative box-border ${bgVar}`}
                 key={f.title}
               >
                 <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
