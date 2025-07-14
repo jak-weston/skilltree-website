@@ -7,8 +7,8 @@ import ClickAwayListener from "react-click-away-listener";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { useState } from "react";
-import { FaBrush, FaShieldHalved } from "react-icons/fa6";
-import { FaLaptop, FaRoad, FaRocket } from "react-icons/fa";
+import { FaBrush, FaShieldHalved, FaStar, FaUsers } from "react-icons/fa6";
+import { FaLaptop, FaQuestionCircle, FaRoad, FaRocket } from "react-icons/fa";
 import SkLogo from "./SkLogo";
 
 const navItems = [
@@ -17,67 +17,46 @@ const navItems = [
     label: "Learn",
     children: [
       {
-        href: "/demo",
+        href: "/#benefits",
+        label: "Benefits",
+        icon: FaRocket,
+        desc: "Why use Skilltree?",
+      },
+      {
+        href: "/#features",
+        label: "Features",
+        icon: FaStar,
+        desc: "What Skilltree offers",
+      },
+      {
+        href: "/#demo",
         label: "Demo",
         icon: FaLaptop,
-        desc: "Explore Resu's features",
+        desc: "Explore Skilltree's features",
+      },
+      {
+        href: "/#collaborate",
+        label: "Collaborate",
+        icon: FaUsers,
+        desc: "Join our community or team",
+      },
+      {
+        href: "/#faq",
+        label: "FAQ",
+        icon: FaQuestionCircle,
+        desc: "Frequently Asked Questions",
       },
 
       {
-        href: "/#themes",
-        label: "Themes",
-        icon: FaBrush,
-        desc: "View all our themes",
-      },
-
-      {
-        href: "/#mission",
-        label: "Mission",
-        icon: FaRocket,
-        desc: "What drives us",
-      },
-
-      {
-        href: "/privacy",
+        href: "/privacy-policy",
         label: "Privacy & TOS",
         icon: FaShieldHalved,
         desc: "How we manage your data",
       },
-
-      {
-        href: "/roadmap",
-        label: "Roadmap",
-        icon: FaRoad,
-        desc: "See what's to come!",
-      },
     ],
   },
-  // {
-  //   href: "",
-  //   label: "Product",
-  //   children: [
-  //     {
-  //       href: "/c/upload",
-  //       label: "Create",
-  //       icon: FaPlus,
-  //       desc: "Create a new website",
-  //     },
-  //     {
-  //       href: "/dashboard",
-  //       label: "Dashboard",
-  //       icon: MdSpaceDashboard,
-  //       desc: "Manage existing websites",
-  //     },
-  //     {
-  //       href: "/billing",
-  //       label: "Billing",
-  //       icon: FaCreditCard,
-  //       desc: "Manage billing information",
-  //     },
-  //   ],
-  // },
 
-  { href: "/pricing", label: "Pricing" },
+  { href: "/#pricing", label: "Pricing" },
 ];
 
 export function Navbar() {
@@ -114,7 +93,7 @@ export function Navbar() {
           {navItems.slice(0, navItems.length).map((item, index) =>
             !item.children ? (
               <Link
-                className="group relative text-md font-body transition-all hover:text-primary"
+                className="group relative text-md transition-all group-hover:underline"
                 key={index}
                 href={item.href}
               >
@@ -187,8 +166,8 @@ export function Navbar() {
         </div>
 
         {/* CTA Button DESKTOP*/}
-        <div className="flex flex-row gap-2">
-          <Link href="/login">
+        <div className="hidden md:flex flex-row gap-2">
+          <Link href="/download">
             <Button className="group">
               Download
               <LucideArrowRight
@@ -219,7 +198,7 @@ export function Navbar() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: -10 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="flex flex-col shadow-md items-center justify-start gap-1 p-2 absolute top-[80%] right-[2.5%] z-50 bg-secondary border-2 border-solid border-border rounded-2xl mt-1.5  w-full max-w-[200px]"
+                className="flex flex-col shadow-md items-center justify-start gap-1 p-2 absolute top-[80%] right-[0] z-50 bg-secondary border-2 border-solid border-border rounded-2xl mt-1.5  w-full max-w-[200px]"
               >
                 {navItems.map((item, index) => {
                   return item.children === undefined ? (
@@ -304,7 +283,7 @@ export function Navbar() {
                                 }}
                                 key={child.href}
                                 href={child.href}
-                                className="text-md transition-colors hover:text-primary py-2 hover:bg-secondary rounded-xl pl-4 px-3 w-full"
+                                className="text-md transition-colors hover:text-primary py-2 hover:bg-secondary rounded-xl  px-3 w-full"
                                 onClick={() => setIsOpen(false)}
                               >
                                 <div className="flex flex-row justify-start items-center gap-2">
@@ -319,7 +298,7 @@ export function Navbar() {
                   );
                 })}
 
-                <Link href="/login" className="w-full">
+                <Link href="" className="w-full">
                   <motion.div
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -329,13 +308,10 @@ export function Navbar() {
                       type: "spring",
                       stiffness: 300,
                       damping: 30,
-                      // delay: (navItems.length + 1) * 0.1,
                       delay: 0.1,
                     }}
-                    className="rounded-2xl cursor-pointer bg-primary text-background w-full py-2 font-body font-semibold text-sm h-9 bg-gradient-to-t from-pink-400 to-pink-300"
                   >
-                    Login
-                    <Button className="group">
+                    <Button className="group w-full">
                       Download
                       <LucideArrowRight
                         className="group-hover:translate-x-0.5 text-sm transition-all"
