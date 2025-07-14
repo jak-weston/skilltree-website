@@ -34,10 +34,10 @@ export default function Benefits() {
             <li
               key={content.title}
               className={cn(
-                "md:p-4 py-3 md:py-6 md:hover:bg-secondary rounded-md cursor-pointer md:hover:border-border border border-background transition-all",
+                "md:p-4 py-3 md:py-6  rounded-md cursor-pointer md:hover:border-border border border-background transition-all",
                 selected === content.title
-                  ? "md:bg-secondary md:border-border"
-                  : "bg-background"
+                  ? "md:border-border md:bg-[var(--color-sk-purple)]"
+                  : "bg-background md:hover:bg-secondary"
               )}
               onClick={() => setSelected(content.title)}
             >
