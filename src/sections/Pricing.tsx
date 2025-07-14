@@ -21,11 +21,11 @@ export default function Pricing() {
         <div className="border border-border p-4 rounded-lg w-full">
           <h3>{plans.free.label}</h3>
           <p>{plans.free.yearly}</p>
-          <ul className="mt-2  list-inside text-lg">
+          <ul className="mt-2  list-inside ">
             {features.map((feature, index) => (
               <li
                 key={index}
-                className={`${
+                className={`my-3 ${
                   feature.free ? "text-primary" : "text-muted-foreground"
                 }`}
               >
@@ -48,6 +48,13 @@ export default function Pricing() {
             }}
           >
             <div className="inline-flex items-center justify-between w-full">
+              <Button
+                variant="ghost"
+                className="border-border border cursor-pointer absolute top-4 right-4 hover:bg-secondary"
+                onClick={() => setMonthly(!monthly)}
+              >
+                {monthly ? "Yearly" : "Monthly"}
+              </Button>
               <div>
                 <h3>{plans.pro.label}</h3>
                 <h4 style={{ color: "var(--color-sk-yellow)" }}>
@@ -60,19 +67,12 @@ export default function Pricing() {
                     : ""}
                 </p>
               </div>
-              <Button
-                variant="ghost"
-                className="border-border border cursor-pointer"
-                onClick={() => setMonthly(!monthly)}
-              >
-                {monthly ? "Yearly" : "Monthly"}
-              </Button>
             </div>
-            <ul className="mt-2   text-lg flex-col gap-3">
+            <ul className="mt-2 flex-col gap-3">
               {features.map((feature, index) => (
                 <li
                   key={index}
-                  className={`${
+                  className={`my-3 ${
                     feature.pro ? "text-primary" : "text-muted-foreground"
                   }`}
                 >
