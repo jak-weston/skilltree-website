@@ -168,28 +168,68 @@ const HomeCopy = {
 
   pricing: {
     header: "Flexible Plans for Every Athlete",
+    features: [
+      {
+        feature: "First skill path included",
+        free: true,
+        pro: true,
+      },
+      {
+        feature: "Core workouts",
+        free: true,
+        pro: true,
+      },
+      {
+        feature: "Progress tracking",
+        free: true,
+        pro: true,
+      },
+      {
+        feature: "Basic AI feedback",
+        free: true,
+        pro: true,
+      },
+      {
+        feature: "Unlimited skill trees",
+        free: false,
+        pro: true,
+      },
+      {
+        feature: "Advanced AI form guidance",
+        free: false,
+        pro: true,
+      },
+      {
+        feature: "Smart plan adjustments",
+        free: false,
+        pro: true,
+      },
+      {
+        feature: "Full video library",
+        free: false,
+        pro: true,
+      },
+      {
+        feature: "Priority support",
+        free: false,
+        pro: true,
+      },
+    ],
     plans: {
-      free: [
-        "First skill path included",
-        "Core workouts",
-        "Progress tracking",
-        "Basic AI feedback",
-      ],
+      free: {
+        label: "Free",
+        yearly: "Upgrade any time",
+      },
       pro: {
-        monthly: "$6.99/month",
-        yearly: "$49/year",
-        features: [
-          "Unlimited skill trees",
-          "Advanced AI form guidance",
-          "Smart plan adjustments",
-          "Full video library",
-          "Priority support",
-        ],
+        label: "Pro",
+        monthly: 6.99,
+        yearly: 49,
       },
     },
     cta: "Start Free — Upgrade Anytime",
     note: "Android version coming soon!",
   },
+
   faq: {
     header: "Frequently Asked Questions",
     items: [
