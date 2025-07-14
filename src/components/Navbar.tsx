@@ -92,12 +92,10 @@ export function Navbar() {
         <div className="hidden md:flex justify-center items-center gap-8">
           {navItems.slice(0, navItems.length).map((item, index) =>
             !item.children ? (
-              <Link
-                className="group relative text-md transition-all group-hover:underline"
-                key={index}
-                href={item.href}
-              >
-                {item.label}
+              <Link key={index} href={item.href}>
+                <span className="relative z-10 hover:underline">
+                  {item.label}
+                </span>
               </Link>
             ) : (
               <div

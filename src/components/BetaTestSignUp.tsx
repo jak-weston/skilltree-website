@@ -151,7 +151,7 @@ const HiringForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md" id="collaborate spacing-section">
+    <div className="max-w-md spacing-section" id="collaborate">
       <h2 className="text-center">Join Our Team</h2>
       <p className="text-center">
         We are looking for passionate individuals to join our team!
