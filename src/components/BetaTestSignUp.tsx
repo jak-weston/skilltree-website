@@ -151,7 +151,7 @@ const HiringForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md spacing-section" id="collaborate">
+    <div className="max-w-md">
       <h2 className="text-center">Join Our Team</h2>
       <p className="text-center">
         We are looking for passionate individuals to join our team!
@@ -220,7 +220,10 @@ const HiringForm: React.FC = () => {
 
 const BetaTestSection: React.FC = () => {
   return (
-    <div className="flex items-center justify-center flex-col my-16">
+    <div
+      className="flex items-center justify-center flex-col my-16 spacing-section"
+      id="collaborate"
+    >
       <span className="chip">Collaborate</span>
 
       <div className="container mx-auto  flex flex-col md:flex-row items-center justify-center gap-8">
