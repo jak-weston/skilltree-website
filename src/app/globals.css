@@ -67,6 +67,9 @@
 
   --color-sk-white: oklch(1 0 0);
   --color-sk-white-light: oklch(0.9006 0 0);
+
+  /* --color-frame: #5f6460; */
+  --color-frame: oklch(0.3961 0.0088 151.74);
 }
 
 @layer base {
