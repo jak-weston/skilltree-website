@@ -7,7 +7,7 @@ const HomeCopy = {
       "Skilltree is your adaptive calisthenics coach — guiding you through a clear, skill-based journey that builds real strength, improves form, and keeps you moving forward.",
     cta: ["Try Your First Skill Path Free", "See How It Works"],
   },
-  features: {
+  benefits: {
     header: "A Smarter Way to Train",
     subheader: "Progress and perform at your best using Skilltree.",
     items: [
@@ -55,7 +55,7 @@ const HomeCopy = {
       },
     ],
   },
-  benefits: {
+  features: {
     header: "Train With Confidence — Not Confusion",
     subheader: "Learn how to make Skilltree work for you.",
     items: [

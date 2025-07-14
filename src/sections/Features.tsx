@@ -1,41 +1,96 @@
+"use client";
 import { HomeCopy as copy } from "@/content";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Features() {
+  const [selected, setSelected] = useState<string>(
+    copy.features.items[0].title
+  );
+
+  const [selectedItem, setSelectedItem] = useState<>(copy.features.items[0]);
+
+  useEffect(() => {
+    const item = copy.features.items.find((item) => item.title === selected);
+    if (item) {
+      setSelectedItem(item);
+    }
+  }, [selected]);
+
   return (
-    <section id="features" className="relative spacing-section">
-      {/* Header and buttons to navigate left and right. Buttons disappear on mobile, opting for a column list */}
-      <div className="flex flex-col items-center justify-center gap-1 my-3">
-        <span className="chip">Features</span>
-        <h2>{copy.features.header}</h2>
-        <p className="text-lg">{copy.features.subheader}</p>
-      </div>
+    <section
+      id="features"
+      className="mt-6 w-full flex flex-col items-center justify-center"
+    >
+      <span className="chip">Features</span>
+      <h2 className="text-center ">{copy.features.header}</h2>
+      <p className="text-lg mb-4">{copy.features.subheader}</p>
 
-      <div className="relative mt-6 ">
-        <ul className="flex flex-col md:grid md:grid-cols-3 gap-4 ">
-          {copy.features.items.map((f) => {
-            const bgVar = `--color-sk-${f.color}`;
-            return (
-              <div
-                style={{
-                  backgroundColor: `var(${bgVar})`,
-                  borderColor: `var(${bgVar})`,
-                }}
-                className={`text-white overflow-hidden rounded-xl border-8 w-full md:max-w-xl flex-shrink-0 p-4 py-6 md:p-6 md:py-8 group relative box-border ${bgVar}`}
-                key={f.title}
-              >
-                <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
-                  <div className="absolute w-[200%] h-10  bottom-[5%] left-[-15%] group-hover:left-[-17%] -rotate-45 transition-all duration-300 bg-white/20" />
-                  <div className="absolute w-[200%] h-12  bottom-[5%] left-[2%] group-hover:left-[0] -rotate-45 transition-all duration-300 bg-white/20" />
-                </div>
+      {/* features list and image */}
+      <div className="flex flex-row  gap-4 w-full container mt-3 justify-center items-center">
+        <ul className="flex flex-col gap-2 w-full max-w-xl h-full justify-center">
+          {copy.features.items.map((content) => (
+            <li
+              key={content.title}
+              className={cn(
+                "md:p-4 py-3 md:py-6  rounded-md cursor-pointer md:hover:border-border border border-background transition-all",
+                selected === content.title
+                  ? "md:border-border md:bg-[var(--color-sk-purple)]"
+                  : "bg-background md:hover:bg-secondary"
+              )}
+              onClick={() => setSelected(content.title)}
+            >
+              <h3 className="mb-2 text-center md:text-left">{content.title}</h3>
+              <p className="text-lg text-center md:text-left">
+                {content.description}
+              </p>
 
-                <div className="relative z-10">
-                  <h3 className="text-3xl">{f.title}</h3>
-                  <p className="text-lg text-white/90">{f.description}</p>
-                </div>
+              <div className="w-full md:hidden items-center justify-center relative">
+                {/* Background blur for the container */}
+                <div className="absolute inset-0 z-0 backdrop-blur-xl  rounded-4xl pointer-events-none" />
+
+                {/* Blurred green blob behind the image */}
+                <div
+                  className="absolute z-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[500px] md:h-[500px] rounded-full bg-sk-purple-light/30 blur-[150px] animate-pulse"
+                  aria-hidden="true"
+                />
+
+                {/* The image itself (not blurred) */}
+                <Image
+                  src={`/features/${content.image}`}
+                  alt="Skill progression tree"
+                  className="mx-auto z-10 w-[300px]  md:w-80 transform scale-90 shadow-xl shadow-secondary border-5 border-solid border-border rounded-4xl hover:-translate-y-2 hover:shadow-primary/10 transition-all duration-300"
+                  width={600}
+                  height={800}
+                />
               </div>
-            );
-          })}
+            </li>
+          ))}
         </ul>
+
+        <div className="w-full hidden items-center justify-center relative md:flex">
+          {/* Background blur for the container */}
+          <div className="absolute inset-0 z-0 backdrop-blur-xl  rounded-4xl pointer-events-none" />
+
+          {/* Blurred green blob behind the image */}
+          <div
+            className="absolute z-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[500px] md:h-[500px] rounded-full bg-sk-purple-light/30 blur-[150px] animate-pulse"
+            aria-hidden="true"
+          />
+
+          {/* The image itself (not blurred) */}
+          <Image
+            src={`/features/${selectedItem.image}`}
+            alt="Skill progression tree"
+            style={{
+              boxShadow: "6px 9px 0 0 #ffffff1a",
+            }}
+            className=" relative z-10 w-[300px] rotate-[15deg] -skew-y-[7deg] md:w-80 transform hover:scale-[0.91] scale-90 hover:rotate-x-5 animate-sinusoidal shadow-xl shadow-secondary border-4 border-solid border-border rounded-4xl hover:-translate-y-2 hover:shadow-primary/10 transition-all duration-300"
+            width={600}
+            height={800}
+          />
+        </div>
       </div>
     </section>
   );

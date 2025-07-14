@@ -33,8 +33,8 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-4">
-          <Benefits />
           <Features />
+          <Benefits />
           <Testimonials />
           <Demo />
           <Pricing />
