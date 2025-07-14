@@ -7,7 +7,7 @@ import ClickAwayListener from "react-click-away-listener";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { useState } from "react";
-import { FaB, FaShieldHalved, FaStar, FaUsers } from "react-icons/fa6";
+import { FaB, FaShieldHalved, FaStar } from "react-icons/fa6";
 import { FaLaptop, FaQuestionCircle, FaRocket } from "react-icons/fa";
 import SkLogo from "./SkLogo";
 
