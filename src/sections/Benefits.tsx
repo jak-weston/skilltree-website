@@ -21,10 +21,10 @@ export default function Benefits() {
   return (
     <section
       id="benefits"
-      className="spacing-section w-full flex flex-col items-center justify-center"
+      className="mt-6 w-full flex flex-col items-center justify-center"
     >
       <span className="chip">Benefits</span>
-      <h2>{copy.benefits.header}</h2>
+      <h2 className="text-center ">{copy.benefits.header}</h2>
       <p className="text-lg mb-4">{copy.benefits.subheader}</p>
 
       {/* Benefits list and image */}
