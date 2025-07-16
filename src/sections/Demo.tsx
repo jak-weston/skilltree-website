@@ -9,8 +9,17 @@ export default function Demo() {
       <h2>{copy.demo.header}</h2>
       <p className="mb-3">{copy.demo.subheader}</p>
 
-      <div className="flex w-full container mt-4 aspect-video rounded-md bg-gradient-to-tr from-primary/20 to-primary/5 items-center  justify-center">
-        [YouTube Video Demo]
+      <div className="flex w-full container h-full bg-transparent inset-3 aspect-video overflow-hidden shadow-lg rounded-2xl">
+        <iframe
+          width={560 * 1.5}
+          height={315 * 1.5}
+          className="w-full h-full aspect-video"
+          src={copy.demo.link}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
       </div>
     </section>
   );

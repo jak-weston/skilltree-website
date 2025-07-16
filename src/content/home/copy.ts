@@ -116,7 +116,7 @@ const HomeCopy = {
   demo: {
     header: "See It in Action",
     subheader: "Clean interface. Personalized guidance. Real results.",
-    screenshots: ["skill-tree", "workout-log", "video-demo", "user-profile"],
+    link: "https://www.youtube.com/embed/G1hKzCkywM8?si=-ZI_ZcRmFdFkHYF6",
   },
   testimonials: {
     header: "What People Are Saying",

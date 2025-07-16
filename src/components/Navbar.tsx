@@ -7,57 +7,8 @@ import ClickAwayListener from "react-click-away-listener";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { useState } from "react";
-import { FaB, FaShieldHalved, FaStar } from "react-icons/fa6";
-import { FaLaptop, FaQuestionCircle, FaRocket } from "react-icons/fa";
 import SkLogo from "./SkLogo";
-
-const navItems = [
-  {
-    href: "",
-    label: "Learn",
-    children: [
-      {
-        href: "/#benefits",
-        label: "Benefits",
-        icon: FaRocket,
-        desc: "Why use Skilltree?",
-      },
-      {
-        href: "/#features",
-        label: "Features",
-        icon: FaStar,
-        desc: "What Skilltree offers",
-      },
-      {
-        href: "/#demo",
-        label: "Demo",
-        icon: FaLaptop,
-        desc: "Explore Skilltree's features",
-      },
-      {
-        href: "/#collaborate",
-        label: "Join the Beta",
-        icon: FaB,
-        desc: "Give Skilltree feedback",
-      },
-      {
-        href: "/#faq",
-        label: "FAQ",
-        icon: FaQuestionCircle,
-        desc: "Frequently Asked Questions",
-      },
-
-      {
-        href: "/privacy-policy",
-        label: "Privacy & TOS",
-        icon: FaShieldHalved,
-        desc: "How we manage your data",
-      },
-    ],
-  },
-
-  { href: "/#pricing", label: "Pricing" },
-];
+import navItems from "@/content/nav/nav";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
