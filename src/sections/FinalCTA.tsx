@@ -31,13 +31,17 @@ export default function FinalCTA() {
         </p>
 
         <div className="mt-4 flex flex-col sm:flex-row gap-4 relative z-10">
-          <Button variant="secondary">Android: Coming Soon</Button>
-          <Button className="group">
-            Get Skilltree for iOS
-            <LucideArrowRight
-              className="group-hover:translate-x-0.5 text-sm transition-all"
-              size={16}
-            ></LucideArrowRight>
+          <Button variant="secondary" asChild>
+            <a href="/coming-soon">Android: Coming Soon</a>
+          </Button>
+          <Button className="group" asChild>
+            <a href="/coming-soon">
+              Get Skilltree for iOS
+              <LucideArrowRight
+                className="group-hover:translate-x-0.5 text-sm transition-all"
+                size={16}
+              ></LucideArrowRight>
+            </a>
           </Button>
         </div>
       </div>

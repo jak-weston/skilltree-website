@@ -27,8 +27,12 @@ export default function Home() {
             {copy.hero.subheader}
           </p>
           <div className="inline-flex gap-2 items-center z-10">
-            <Button>Download</Button>
-            <Button variant={"secondary"}>Learn More</Button>
+            <Button asChild>
+              <a href="/coming-soon">Download</a>
+            </Button>
+            <Button variant={"secondary"} asChild>
+              <a href="/blog">Learn More</a>
+            </Button>
           </div>
         </div>
 

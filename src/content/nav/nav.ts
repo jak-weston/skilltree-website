@@ -47,6 +47,7 @@ const nav = [
   },
 
   { href: "/#pricing", label: "Pricing" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default nav;

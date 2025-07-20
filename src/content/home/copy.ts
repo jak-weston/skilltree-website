@@ -4,7 +4,7 @@ const HomeCopy = {
     // header: "Move Better.<br/>Train Smarter.<br/>Progress with Purpose.",
     // header: "Move Better. Train Smarter. Progress with Purpose.",
     subheader:
-      "Skilltree is your adaptive calisthenics coach — guiding you through a clear, skill-based journey that builds real strength, improves form, and keeps you moving forward.",
+      "The smart, fun, and easy way to learn an exercise.",
     cta: ["Try Your First Skill Path Free", "See How It Works"],
   },
   benefits: {
@@ -116,7 +116,7 @@ const HomeCopy = {
   demo: {
     header: "See It in Action",
     subheader: "Clean interface. Personalized guidance. Real results.",
-    link: "https://www.youtube.com/embed/G1hKzCkywM8?si=-ZI_ZcRmFdFkHYF6",
+    link: "https://www.youtube.com/embed/tvAsbwWoRpk?si=k3jknqJQVuyH4di6&amp;controls=0",
   },
   testimonials: {
     header: "What People Are Saying",
@@ -124,43 +124,43 @@ const HomeCopy = {
       "Don't just take it from us. See what people think of our product.",
     quotes: [
       {
-        text: "Before Skilltree, I didn’t know where to start. Now I feel confident every time I train.",
-        author: "Rachel L., beginner",
+        text: "Before Skilltree I didnt know where to start. Now I feel confident every time I train. The app really helped me understand what to do next.",
+        author: "Priya S., Beginner",
         rating: 5,
       },
       {
-        text: "I’ve made more progress in 3 months than I did in a year at the gym.",
-        author: "Tomas K., intermediate",
+        text: "Ive made more progress in 3 months than I did in a year at the gym. Finally got my first handstand last week!",
+        author: "Marcus J., Student Athlete",
         rating: 5,
       },
       {
-        text: "The AI trainer gives me peace of mind — I know I’m doing things right.",
-        author: "Jordan W., beginner",
+        text: "The AI trainer gives me peace of mind. I know Im doing things right and not gonna hurt myself.",
+        author: "Jordan W., Beginner",
         rating: 5,
       },
       {
-        text: "The workouts adapt to me. I don’t have to think — just show up and train. It’s been a huge time-saver and completely removed the mental friction that used to come with working out.",
-        author: "Monica D., busy professional",
+        text: "The workouts adapt to me. I dont have to think, just show up and train. Its been a huge time saver and completely removed the mental friction that used to come with working out.",
+        author: "Aisha K., Busy Mom",
         rating: 5,
       },
       {
-        text: "It’s like having a personal coach in my pocket. The program adjusts to how I’m feeling, tracks my progress automatically, and pushes me just the right amount — it’s honestly smarter than some human coaches I’ve had.",
-        author: "Derek F., returning lifter",
+        text: "Its like having a personal coach in my pocket. The program adjusts to how Im feeling, tracks my progress automatically, and pushes me just the right amount. Honestly smarter than some human coaches Ive had.",
+        author: "Derek F., Intermediate",
         rating: 5,
       },
       {
-        text: "The progress tracking keeps me motivated — I can actually *see* how far I’ve come, which makes it way easier to stay consistent. I check my metrics more than I check social media now.",
-        author: "Ali P., goal-oriented",
+        text: "The progress tracking keeps me motivated. I can actually see how far Ive come, which makes it way easier to stay consistent. I check my metrics more than I check social media now.",
+        author: "Arjun P., Intermediate",
         rating: 4,
       },
       {
         text: "No fluff, no confusion. Just a clear path forward every session. Every time I open the app, I know exactly what to do, and I can feel the results week to week.",
-        author: "Jessie M., minimalist",
+        author: "Jin M., Beginner",
         rating: 5,
       },
       {
-        text: "Skilltree helped me finally stay consistent. That’s what changed everything. I used to jump from one program to another, always second-guessing. Now I trust the plan and stick with it.",
-        author: "Victor R., formerly inconsistent",
+        text: "Skilltree helped me finally stay consistent. Thats what changed everything. I used to jump from one program to another, always second guessing. Now I trust the plan and stick with it.",
+        author: "Victor R., Intermediate",
         rating: 5,
       },
     ],

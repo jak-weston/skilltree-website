@@ -80,9 +80,9 @@ export function Navbar() {
                       }}
                       className="flex flex-col shadow-lg items-center justify-start gap-1 p-2 absolute top-[150%] left-[-110px] z-50 bg-background border border-solid border-border rounded-2xl mt-1.5  w-[300px]"
                     >
-                      {item.children.map((item) => (
+                      {item.children.map((item, childIndex) => (
                         <motion.a
-                          key={item.href}
+                          key={`${item.href}-${childIndex}`}
                           href={item.href}
                           initial={{ opacity: 0, y: 10, rotate: 0 }}
                           animate={{ opacity: 1, y: 0, rotate: 0 }}
@@ -116,7 +116,7 @@ export function Navbar() {
 
         {/* CTA Button DESKTOP*/}
         <div className="hidden md:flex flex-row gap-2">
-          <Link href="/download">
+          <Link href="/coming-soon">
             <Button className="group">
               Download
               <LucideArrowRight
@@ -247,7 +247,7 @@ export function Navbar() {
                   );
                 })}
 
-                <Link href="" className="w-full">
+                <Link href="/coming-soon" className="w-full">
                   <motion.div
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}

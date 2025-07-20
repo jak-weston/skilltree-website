@@ -23,21 +23,23 @@ export const metadata: Metadata = {
   description:
     "Skilltree is your AI-powered calisthenics coach, guiding you from beginner to advanced skills with personalized training plans.",
   icons: {
-    apple: "/apple-touch-icon.png",
     icon: [
       {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        url: "/favicon/favicon-32x32.png",
+        url: "/favicon/favicon.ico",
+        type: "image/x-icon",
       },
       {
-        rel: "icon",
+        url: "/favicon/favicon.svg",
+        type: "image/svg+xml",
+        sizes: "any",
+      },
+      {
+        url: "/favicon/favicon-96x96.png",
         type: "image/png",
-        sizes: "16x16",
-        url: "/favicon/favicon-16x16.png",
+        sizes: "96x96",
       },
     ],
+    apple: "/favicon/apple-touch-icon.png",
   },
 };
 
@@ -48,13 +50,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      {/* <head>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest"></link>
-
-      </head> */}
+      <head>
+        <meta name="apple-mobile-web-app-title" content="SkillTree" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${kanitSans.variable} antialiased`}
       >

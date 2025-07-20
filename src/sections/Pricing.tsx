@@ -89,7 +89,9 @@ export default function Pricing() {
         </div>
       </div>
 
-      <Button className="mt-8 z-[5]">{cta}</Button>
+      <Button className="mt-8 z-[5]" asChild>
+        <a href="/coming-soon">{cta}</a>
+      </Button>
       <p className="mt-2 text-sm">{note}</p>
     </section>
   );
