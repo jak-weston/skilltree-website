@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import BetaTestSection from "@/components/BetaTestSignUp";
 import { FaRegClock, FaRegEnvelope, FaRegBell } from "react-icons/fa6";
 import { FaRegKeyboard } from "react-icons/fa";
+import { span } from "motion/react-client";
 
 export default function ComingSoon() {
   return (
