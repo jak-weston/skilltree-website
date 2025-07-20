@@ -2,7 +2,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
-import { FaArrowLeft } from "react-icons/fa6";
 import { useEffect } from "react";
 
 export default function Blog() {

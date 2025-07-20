@@ -1,10 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
-import BetaTestSection from "@/components/BetaTestSignUp";
-import { FaRegClock, FaRegEnvelope, FaRegBell } from "react-icons/fa6";
-import { FaRegKeyboard } from "react-icons/fa";
-import { span } from "motion/react-client";
+import { FaRegClock, FaRegEnvelope } from "react-icons/fa6";
 
 export default function ComingSoon() {
   return (
@@ -22,7 +19,7 @@ export default function ComingSoon() {
               Coming <span className="text-accent">Soon</span>
             </h1>
             <p className="max-w-2xl text-center z-10 text-xl text-white/95 mb-8">
-              We're working hard to bring you the smartest way to learn calisthenics. 
+              We&apos;re working hard to bring you the smartest way to learn calisthenics. 
               Get ready to build strength, master skills, and transform your fitness journey.
             </p>
           </div>
