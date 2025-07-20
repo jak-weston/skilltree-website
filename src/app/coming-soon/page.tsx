@@ -44,7 +44,7 @@ export default function ComingSoon() {
           <div className="py-16">
             <div className="text-center mb-12">
               <div className="flex justify-center mb-4">
-                <span className="chip">What's Coming</span>
+                <span className="chip">What&apos;s Coming</span>
               </div>
               <h2 className="mt-4 mb-6">Train Smarter, Not Harder</h2>
               <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
