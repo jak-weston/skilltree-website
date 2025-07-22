@@ -86,7 +86,7 @@ export default function Support() {
       setDescription("");
       setDeviceInfo("");
       setPriority(PRIORITY_LEVELS[0].value);
-    } catch (err) {
+    } catch {
       setError("There was an error submitting your request. Please try again later.");
     } finally {
       setLoading(false);
