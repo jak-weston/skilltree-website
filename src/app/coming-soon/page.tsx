@@ -32,7 +32,7 @@ export default function ComingSoon() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <Button size="lg" className="glass-button text-white hover:text-blue-300 text-lg px-8 py-3" asChild>
+                <Button size="lg" className="glass-button text-white hover:text-white text-lg px-8 py-3 font-bold shadow-2xl hover:shadow-blue-500/25" asChild>
                   <a href="https://skilltreefitness.substack.com/" target="_blank" rel="noopener noreferrer">
                     <FaRegEnvelope className="mr-2" />
                     Join Waitlist
@@ -104,7 +104,7 @@ export default function ComingSoon() {
                 Plus, receive exclusive updates and behind-the-scenes content.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="glass-button text-white hover:text-blue-300 text-lg px-8 py-3" asChild>
+                <Button size="lg" className="glass-button text-white hover:text-white text-lg px-8 py-3 font-bold shadow-2xl hover:shadow-blue-500/25" asChild>
                   <a href="https://skilltreefitness.substack.com/" target="_blank" rel="noopener noreferrer">
                     <FaRegEnvelope className="mr-2" />
                     Join Waitlist

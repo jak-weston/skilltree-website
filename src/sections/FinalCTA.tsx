@@ -26,17 +26,11 @@ export default function FinalCTA() {
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 relative z-10">
-          <Button className="glass-button text-white hover:text-blue-300 px-8 py-3 text-lg" asChild>
-            <a href="/coming-soon">Android: Coming Soon</a>
+          <Button className="glass-button text-white hover:text-white px-8 py-3 text-lg font-bold shadow-2xl hover:shadow-blue-500/25" asChild>
+            <a href="#pricing">Get Started Today</a>
           </Button>
-          <Button className="glass-button text-white hover:text-blue-300 px-8 py-3 text-lg group" asChild>
-            <a href="/coming-soon">
-              Get Rep AI for iOS
-              <LucideArrowRight
-                className="group-hover:translate-x-0.5 text-sm transition-all"
-                size={16}
-              />
-            </a>
+          <Button className="glass-button text-white hover:text-white px-8 py-3 text-lg font-bold shadow-2xl hover:shadow-blue-500/25 group" asChild>
+            <a href="/beta-test">Join Beta Test</a>
           </Button>
         </div>
       </div>

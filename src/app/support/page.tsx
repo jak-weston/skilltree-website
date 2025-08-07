@@ -248,7 +248,7 @@ export default function Support() {
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="w-full glass-button text-white hover:text-blue-300"
+                  className="w-full glass-button text-white hover:text-white font-bold shadow-lg hover:shadow-blue-500/25"
                 >
                   {loading ? "Submitting..." : "Submit Support Request"}
                 </Button>

@@ -86,8 +86,8 @@ export default function Pricing() {
         </div>
       </div>
 
-      <Button className="mt-8 glass-button text-white hover:text-blue-300 px-8 py-3 text-lg" asChild>
-        <a href="/coming-soon">{cta}</a>
+      <Button className="mt-8 glass-button text-white hover:text-white px-8 py-3 text-lg font-bold shadow-2xl hover:shadow-blue-500/25" asChild>
+        <a href="/coming-soon">Get Started</a>
       </Button>
       <p className="mt-2 text-sm text-white/60">{note}</p>
     </section>

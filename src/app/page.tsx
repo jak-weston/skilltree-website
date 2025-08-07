@@ -29,17 +29,17 @@ export default function Home() {
           {/* Content */}
           <div className="relative z-10 text-center max-w-4xl mx-auto">
             <div className="glass-card p-8 mb-8">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                Track. Compete. <span className="text-blue-300">Progress.</span>
+              <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                Turn pushup tracking into <span className="text-blue-300">strength building</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Rep AI is your all-in-one pushup analytics app with duals and AI-powered insights. Track your workouts, compete with friends, and get intelligent analytics to improve your performance.
+                Ready to transform your pushup training? Rep AI makes it simple to track your progress, compete with friends, and get AI powered insights to build real strength.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button className="glass-button text-white hover:text-blue-300 px-8 py-3 text-lg">
+                <Button className="glass-button text-white hover:text-white px-8 py-3 text-lg font-bold shadow-2xl hover:shadow-blue-500/25">
                   Start Tracking
                 </Button>
-                <Button variant="outline" className="glass-button border-white/20 text-white hover:text-blue-300 px-8 py-3 text-lg">
+                <Button variant="outline" className="glass-button border-blue-400/50 text-white hover:text-blue-300 px-8 py-3 text-lg font-semibold">
                   Learn More
                 </Button>
               </div>
@@ -54,7 +54,6 @@ export default function Home() {
           <Testimonials />
           <Pricing />
           <FinalCTA />
-          <FAQ />
         </div>
       </main>
 

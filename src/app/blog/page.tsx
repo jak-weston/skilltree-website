@@ -58,7 +58,7 @@ export default function Blog() {
                 <p className="text-white/80 mb-4">
                   Get the latest tips on pushup training, form improvement, and progress tracking with AI analytics.
                 </p>
-                <Button variant="outline" className="glass-button border-white/20 text-white hover:text-blue-300" asChild>
+                <Button className="glass-button text-white hover:text-white font-bold shadow-lg hover:shadow-blue-500/25" asChild>
                   <a href="https://skilltreefitness.substack.com/" target="_blank" rel="noopener noreferrer">
                     Read More
                   </a>
@@ -70,7 +70,7 @@ export default function Blog() {
                 <p className="text-white/80 mb-4">
                   Stay updated on new features, improvements, and behind-the-scenes development of Rep AI.
                 </p>
-                <Button variant="outline" className="glass-button border-white/20 text-white hover:text-blue-300" asChild>
+                <Button className="glass-button text-white hover:text-white font-bold shadow-lg hover:shadow-blue-500/25" asChild>
                   <a href="https://skilltreefitness.substack.com/" target="_blank" rel="noopener noreferrer">
                     Read More
                   </a>
