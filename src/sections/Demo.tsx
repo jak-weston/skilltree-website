@@ -11,7 +11,7 @@ export default function Demo() {
       </h2>
       <p className="mb-3 text-white/80">{copy.demo.subheader}</p>
 
-      <div className="flex w-full max-w-3xl container h-full glass-card aspect-video overflow-hidden shadow-2xl rounded-2xl">
+      <div className="flex w-full max-w-9xl container h-full glass-card aspect-video overflow-hidden shadow-2xl rounded-2xl">
         <iframe
           width={560 * 1.5}
           height={315 * 1.5}
