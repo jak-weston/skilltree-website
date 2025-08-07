@@ -1,4 +1,4 @@
-import { FaB, FaShieldHalved, FaStar } from "react-icons/fa6";
+import { FaShieldHalved, FaStar } from "react-icons/fa6";
 import { FaLaptop, FaQuestionCircle, FaRocket } from "react-icons/fa";
 
 const nav = [
@@ -10,25 +10,19 @@ const nav = [
         href: "/#features",
         label: "Features",
         icon: FaStar,
-        desc: "What Skilltree offers",
+        desc: "What Rep AI offers",
       },
       {
         href: "/#benefits",
         label: "Benefits",
         icon: FaRocket,
-        desc: "Why use Skilltree?",
+        desc: "Why use Rep AI?",
       },
       {
         href: "/#demo",
         label: "Demo",
         icon: FaLaptop,
-        desc: "Explore Skilltree's features",
-      },
-      {
-        href: "/#collaborate",
-        label: "Join the Beta",
-        icon: FaB,
-        desc: "Give Skilltree feedback",
+        desc: "Explore Rep AI's features",
       },
       {
         href: "/#faq",
@@ -36,7 +30,6 @@ const nav = [
         icon: FaQuestionCircle,
         desc: "Frequently Asked Questions",
       },
-
       {
         href: "/privacy-policy",
         label: "Privacy & TOS",
@@ -49,6 +42,7 @@ const nav = [
   { href: "/#pricing", label: "Pricing" },
   { href: "/blog", label: "Blog" },
   { href: "/support", label: "Support" },
+  { href: "/beta-test", label: "Beta Test" },
 ];
 
 export default nav;

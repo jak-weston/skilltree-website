@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { LucideArrowRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import ClickAwayListener from "react-click-away-listener";
 import Link from "next/link";
@@ -12,10 +12,6 @@ import navItems from "@/content/nav/nav";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState<string | undefined>(
-    undefined
-  );
-
   const [hoverID, setHoverID] = useState("");
 
   return (
@@ -28,7 +24,7 @@ export function Navbar() {
         stiffness: 200,
         damping: 30,
       }}
-      className="w-full flex justify-between items-center py-4 shadow-sm gap-12 text-primary sticky top-0 z-50 bg-background border-b border-solid border-border"
+      className="w-full flex justify-between items-center py-4 gap-12 text-primary sticky top-0 z-50 glass-nav"
     >
       <div className="w-full container mx-auto flex justify-between items-center px-4 ">
         {/* Logo */}
@@ -36,7 +32,8 @@ export function Navbar() {
           className="flex justify-center gap-3 items-center cursor-pointer"
           href="/"
         >
-          <SkLogo fill="#eee" className="h-8 w-auto" />
+          <SkLogo fill="#ffffff" className="h-8 w-auto" />
+          <span className="text-xl font-bold text-white">Rep AI</span>
         </Link>
 
         {/* Nav Links */}
@@ -44,7 +41,7 @@ export function Navbar() {
           {navItems.slice(0, navItems.length).map((item, index) =>
             !item.children ? (
               <Link key={index} href={item.href}>
-                <span className="relative z-10 hover:underline">
+                <span className="relative z-10 hover:text-blue-300 transition-colors duration-300">
                   {item.label}
                 </span>
               </Link>
@@ -55,7 +52,7 @@ export function Navbar() {
                 onMouseLeave={() => setHoverID("")}
               >
                 <div
-                  className="font-body transition-all hover:text-primary cursor-pointer"
+                  className="font-body transition-all hover:text-blue-300 cursor-pointer"
                   onMouseOver={() => setHoverID(item.label)}
                 >
                   <div className="flex flex-row items-center justify-center gap-1 transition-all">
@@ -78,7 +75,7 @@ export function Navbar() {
                         stiffness: 500,
                         damping: 25,
                       }}
-                      className="flex flex-col shadow-lg items-center justify-start gap-1 p-2 absolute top-[150%] left-[-110px] z-50 bg-background border border-solid border-border rounded-2xl mt-1.5  w-[300px]"
+                      className="flex flex-col shadow-lg items-center justify-start gap-1 p-2 absolute top-[150%] left-[-110px] z-50 glass-card mt-1.5 w-[300px]"
                     >
                       {item.children.map((item, childIndex) => (
                         <motion.a
@@ -92,16 +89,18 @@ export function Navbar() {
                             stiffness: 300,
                             damping: 30,
                           }}
-                          className="group relative text-md font-body transition-colors hover:text-primary py-2 hover:bg-secondary/80 w-full mx-2 rounded-xl px-2.5 group/icon"
+                          className="group relative text-md font-body transition-colors hover:text-blue-300 py-2 hover:bg-white/10 w-full mx-2 rounded-xl px-2.5 group/icon"
                           onClick={() => setIsOpen(false)}
                         >
                           <div className="flex flex-row justify-start items-center gap-3 ">
-                            <div className="p-2 rounded-md bg-secondary/80 border border-border border-solid group-hover/icon:text-accent transition-all">
+                            <div className="p-2 rounded-md bg-white/10 border border-white/20 group-hover/icon:text-blue-300 transition-all">
                               <item.icon className="h-5 w-5"></item.icon>
                             </div>
                             <div className="flex flex-col">
-                              <p className="font-semibold">{item.label}</p>
-                              <p>{item.desc}</p>
+                              <span className="font-semibold">{item.label}</span>
+                              <span className="text-xs text-muted-foreground">
+                                {item.desc}
+                              </span>
                             </div>
                           </div>
                         </motion.a>
@@ -114,166 +113,79 @@ export function Navbar() {
           )}
         </div>
 
-        {/* CTA Button DESKTOP*/}
-        <div className="hidden md:flex flex-row gap-2">
-          <Link href="/coming-soon">
-            <Button className="group">
-              Download
-              <LucideArrowRight
-                className="group-hover:translate-x-0.5 text-sm transition-all"
-                size={16}
-              ></LucideArrowRight>
-            </Button>
-          </Link>
+        {/* CTA Button */}
+        <div className="hidden md:flex">
+          <Button className="glass-button text-white hover:text-blue-300">
+            Get Started
+          </Button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsOpen(!isOpen)}
+            className="glass-button"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
         </div>
       </div>
 
-      {/* MOBILE MENU */}
-      <ClickAwayListener onClickAway={() => setIsOpen(false)}>
-        <div className="md:hidden">
-          <button
-            className=" rounded-full bg-secondary text-primary cursor-pointer border border-border border-solid  p-2.5"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="navigation menu button"
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="absolute top-full left-0 right-0 glass-card border-t border-white/10"
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-
-          <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                key="mobile-menu"
-                initial={{ opacity: 0, scale: 0.95, y: -10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="flex flex-col shadow-md items-center justify-start gap-1 p-2 absolute top-[80%] right-[0] z-50 bg-secondary border-2 border-solid border-border rounded-2xl mt-1.5  w-full max-w-[200px]"
-              >
-                {navItems.map((item, index) => {
-                  return item.children === undefined ? (
-                    <motion.a
-                      key={item.href}
-                      href={item.href}
-                      initial={{ opacity: 0, y: 10, rotate: 0 }}
-                      animate={{ opacity: 1, y: 0, rotate: 0 }}
-                      exit={{ opacity: 0, y: 10, rotate: 0 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 25,
-                        delay: index * 0.075,
-                      }}
-                      className="group relative text-md font-body transition-colors hover:text-primary  py-2 hover:bg-secondary w-full mx-2 rounded-xl px-2.5"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </motion.a>
-                  ) : (
-                    <>
-                      <motion.div
-                        key={item.href}
-                        initial={{ opacity: 0, y: 10, rotate: 5 }}
-                        animate={{ opacity: 1, y: 0, rotate: 0 }}
-                        exit={{ opacity: 0, y: 10, rotate: 5 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 300,
-                          damping: 30,
-                          delay: index * 0.075,
-                        }}
-                        className="group relative text-md transition-colors hover:text-primary py-2 hover:bg-secondary w-full mx-2 rounded-xl px-2.5 flex flex-col "
+            <ClickAwayListener onClickAway={() => setIsOpen(false)}>
+              <div className="p-4 space-y-4">
+                {navItems.map((item, index) => (
+                  <div key={index}>
+                    {!item.children ? (
+                      <Link
+                        href={item.href}
+                        className="block py-2 text-white hover:text-blue-300 transition-colors"
+                        onClick={() => setIsOpen(false)}
                       >
-                        <div
-                          className="flex flex-row items-center justify-between gap-1 transition-all"
-                          onClick={() =>
-                            setSelectedLink(
-                              item.label === selectedLink
-                                ? undefined
-                                : item.label
-                            )
-                          }
-                        >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <div>
+                        <div className="py-2 text-white font-semibold">
                           {item.label}
-                          <FiChevronDown
-                            className="group-hover:translate-y-[2px] transition-all"
-                            style={{
-                              transform:
-                                item.label === selectedLink
-                                  ? "rotate(180deg)"
-                                  : "rotate(0deg)",
-                            }}
-                          />
                         </div>
-                      </motion.div>
-
-                      <AnimatePresence>
-                        <div className="flex flex-col w-full mx-2 gap-1">
-                          {item.label === selectedLink &&
-                            item.children.map((child, childIndex) => (
-                              <motion.a
-                                initial={{
-                                  opacity: 0,
-                                  // rotate: 5,
-                                  y: 10,
-                                }}
-                                animate={{
-                                  opacity: 1,
-                                  y: 0,
-                                }}
-                                exit={{
-                                  opacity: 0,
-                                  // rotate: 5,
-                                }}
-                                transition={{
-                                  type: "spring",
-                                  stiffness: 300,
-                                  damping: 30,
-                                  delay: childIndex * 0.075,
-                                }}
-                                key={child.href}
-                                href={child.href}
-                                className="text-md transition-colors hover:text-primary py-2 hover:bg-secondary rounded-xl  px-3 w-full"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                <div className="flex flex-row justify-start items-center gap-2">
-                                  <child.icon className="h-5 w-5"></child.icon>
-                                  {child.label}
-                                </div>
-                              </motion.a>
-                            ))}
+                        <div className="pl-4 space-y-2">
+                          {item.children.map((child, childIndex) => (
+                            <Link
+                              key={childIndex}
+                              href={child.href}
+                              className="block py-1 text-sm text-muted-foreground hover:text-blue-300 transition-colors"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
                         </div>
-                      </AnimatePresence>
-                    </>
-                  );
-                })}
-
-                <Link href="/coming-soon" className="w-full">
-                  <motion.div
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 5 }}
-                    onClick={() => setIsOpen(false)}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                      delay: 0.1,
-                    }}
-                  >
-                    <Button className="group w-full">
-                      Download
-                      <LucideArrowRight
-                        className="group-hover:translate-x-0.5 text-sm transition-all"
-                        size={16}
-                      ></LucideArrowRight>
-                    </Button>
-                  </motion.div>
-                </Link>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </ClickAwayListener>
+                      </div>
+                    )}
+                  </div>
+                ))}
+                <div className="pt-4 border-t border-white/10">
+                  <Button className="w-full glass-button text-white hover:text-blue-300">
+                    Get Started
+                  </Button>
+                </div>
+              </div>
+            </ClickAwayListener>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }

@@ -12,16 +12,18 @@ export default function Testimonials() {
     >
       <div className="w-full flex flex-col items-center justify-center text-center">
         <span className="chip">Testimonials</span>
-        <h2>{copy.testimonials.header}</h2>
-        <p>{copy.testimonials.subheader}</p>
+        <h2 className="text-white bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+          {copy.testimonials.header}
+        </h2>
+        <p className="text-white/80">{copy.testimonials.subheader}</p>
       </div>
 
-      <div className="flex flex-col gap-4 w-full md:container mt-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 ">
+      <div className="flex flex-col gap-4 w-full md:container mt-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6">
         {copy.testimonials.quotes.map((quote, index) => (
           <motion.div
             key={index}
             className={cn(
-              "border p-4 md:p-6 relative rounded-lg",
+              "glass-card p-4 md:p-6 relative rounded-lg hover:scale-105 transition-all duration-300",
               index >= 4 ? "hidden md:block" : ""
             )}
             initial={{ opacity: 0, x: 50, y: 50, scale: 0.8 }}
@@ -35,24 +37,24 @@ export default function Testimonials() {
             }}
           >
             <FaQuoteRight
-              className="absolute top-2 right-2 text-secondary"
+              className="absolute top-2 right-2 text-blue-400/60"
               size={60}
             />
 
-            <h5 className="-mb-1">{quote.author}</h5>
+            <h5 className="-mb-1 text-white font-semibold">{quote.author}</h5>
 
             {Array.from({ length: 5 }, (_, i) => (
               <FaStar
                 key={i}
                 className={
                   i < quote.rating
-                    ? "text-yellow-500 inline-block mr-1"
-                    : "text-primary/50 inline-block mr-1"
+                    ? "text-yellow-400 inline-block mr-1"
+                    : "text-white/30 inline-block mr-1"
                 }
               />
             ))}
 
-            <p className="mt-2 text-primary/90">{quote.text}</p>
+            <p className="mt-2 text-white/80">{quote.text}</p>
           </motion.div>
         ))}
       </div>

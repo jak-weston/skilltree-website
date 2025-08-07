@@ -9,125 +9,158 @@ import {
   SelectValue,
 } from "./ui/select";
 import { Button } from "./ui/button";
-import emailValidator from "email-validator";
-// import "./BetaTest.css";
 
 const BetaTest: React.FC = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [feedback, setFeedback] = useState("Yes");
+  const [feedback, setFeedback] = useState("yes");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!emailValidator.validate(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
     setError("");
-
-    const formActionUrl =
-      "https://docs.google.com/forms/d/e/1FAIpQLSfC3cffiwCUqmdoIQhg5VFIWJ7J4k8wr75DuQ6mDANwbf9j8g/formResponse";
+    setSuccess("");
+    setLoading(true);
 
     const formData = new FormData();
-    formData.append("entry.54944481", firstName);
-    formData.append("entry.932744665", lastName);
-    formData.append("entry.1954724458", email);
-    formData.append("entry.1653876590", feedback);
+    formData.append("entry.110262845", firstName);
+    formData.append("entry.1687157273", lastName);
+    formData.append("entry.644514679", email);
+    formData.append("entry.108978292", feedback);
 
-    fetch(formActionUrl, {
-      method: "POST",
-      body: formData,
-      mode: "no-cors",
-    })
-      .then(() => {
-        alert("Form submitted successfully!");
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setFeedback("Yes");
-      })
-      .catch((err) => console.error("Form submission error:", err));
+    try {
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLScvZwZzETDiZuumiR6wM_vYBhDOvdY9jH23U0-aIngWf6XMsA/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        }
+      );
+      setSuccess("Thank you for signing up! We'll be in touch soon.");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setFeedback("yes");
+    } catch {
+      setError("There was an error submitting your request. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="max-w-md">
-      <h2 className="text-center">Beta Test Signup</h2>
-      <p className="text-center">
-        Join our beta test to help shape the future of Skilltree!
-      </p>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3 mt-3">
-        <label>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      {error && (
+        <div className="p-3 bg-red-500/20 border border-red-500/30 rounded-lg text-red-300 text-sm">
+          {error}
+        </div>
+      )}
+      {success && (
+        <div className="p-3 bg-green-500/20 border border-green-500/30 rounded-lg text-green-300 text-sm">
+          {success}
+        </div>
+      )}
+
+      <div className="grid md:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">
+            First Name
+          </label>
           <Input
             type="text"
             value={firstName}
-            placeholder="First Name"
             onChange={(e) => setFirstName(e.target.value)}
             required
+            className="glass-input text-white placeholder:text-white/60"
+            placeholder="Your first name"
           />
-        </label>
-
-        <label>
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">
+            Last Name
+          </label>
           <Input
             type="text"
             value={lastName}
-            placeholder="Last Name"
             onChange={(e) => setLastName(e.target.value)}
             required
+            className="glass-input text-white placeholder:text-white/60"
+            placeholder="Your last name"
           />
+        </div>
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-white mb-2">
+          Email
         </label>
+        <Input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="glass-input text-white placeholder:text-white/60"
+          placeholder="your.email@example.com"
+        />
+      </div>
 
-        <label>
-          <Input
-            type="email"
-            value={email}
-            placeholder="name@example.com"
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-
-        {error && <p className="error-message">{error}</p>}
-
-        <label>
+      <div>
+        <label className="block text-sm font-medium text-white mb-2">
           Are you willing to give feedback?
-          <Select value={feedback} onValueChange={setFeedback}>
-            <SelectTrigger className="w-full">
-              <SelectValue placeholder="Select an option" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="Yes">Yes</SelectItem>
-              <SelectItem value="No">No</SelectItem>
-            </SelectContent>
-          </Select>
         </label>
+        <Select value={feedback} onValueChange={setFeedback}>
+          <SelectTrigger className="glass-input text-white">
+            <SelectValue placeholder="Select an option" />
+          </SelectTrigger>
+          <SelectContent className="glass-select-content">
+            <SelectItem value="yes" className="glass-select-item">Yes</SelectItem>
+            <SelectItem value="no" className="glass-select-item">No</SelectItem>
+            <SelectItem value="maybe" className="glass-select-item">Maybe</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
 
-        <Button
-          type="submit"
-          variant="secondary"
-          className="border border-border"
-        >
-          Submit
-        </Button>
-      </form>
-    </div>
+      <Button
+        type="submit"
+        disabled={loading}
+        className="w-full glass-button text-white hover:text-blue-300"
+      >
+        {loading ? "Submitting..." : "Sign Up for Beta"}
+      </Button>
+    </form>
   );
 };
 
 const BetaTestSection: React.FC = () => {
   return (
-    <div
-      className="flex items-center justify-center flex-col my-16 spacing-section"
-      id="collaborate"
-    >
-      <span className="chip">Join the Beta</span>
-
-      <div className="container mx-auto  flex flex-col md:flex-row items-center justify-center gap-8">
-        <BetaTest />
+    <section className="spacing-section">
+      <div className="flex flex-col items-center justify-center">
+        <span className="chip">Beta Test</span>
+        <h2 className="text-center text-white bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+          Join the Beta
+        </h2>
+        <p className="text-center text-white/80 mb-6">
+          Join our beta test to help shape the future of Rep AI pushup analytics!
+        </p>
+        <div className="glass-card p-8 w-full max-w-lg">
+          <BetaTest />
+        </div>
       </div>
+    </section>
+  );
+};
+
+const BetaTestForm: React.FC = () => {
+  return (
+    <div className="w-full max-w-lg mx-auto">
+      <BetaTest />
     </div>
   );
 };
 
 export default BetaTestSection;
+export { BetaTestForm };

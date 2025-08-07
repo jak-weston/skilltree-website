@@ -19,27 +19,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skilltree Calisthenics",
+  title: "Rep AI - All-in-One Pushup Analytics App",
   description:
-    "Skilltree is your AI-powered calisthenics coach, guiding you from beginner to advanced skills with personalized training plans.",
+    "Rep AI is your intelligent pushup analytics companion, helping you track workouts, compete in duals, and get AI-powered insights to improve your performance.",
   icons: {
     icon: [
-      {
-        url: "/favicon/favicon.ico",
-        type: "image/x-icon",
-      },
       {
         url: "/favicon/favicon.svg",
         type: "image/svg+xml",
         sizes: "any",
       },
-      {
-        url: "/favicon/favicon-96x96.png",
-        type: "image/png",
-        sizes: "96x96",
-      },
     ],
-    apple: "/favicon/apple-touch-icon.png",
+  },
+  other: {
+    "cache-control": "no-cache, no-store, must-revalidate",
   },
 };
 
@@ -51,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <meta name="apple-mobile-web-app-title" content="SkillTree" />
+        <meta name="apple-mobile-web-app-title" content="Rep AI" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
       <body

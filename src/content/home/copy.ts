@@ -1,115 +1,113 @@
 /// Copy for the homepage landing
 const HomeCopy = {
   hero: {
-    // header: "Move Better.<br/>Train Smarter.<br/>Progress with Purpose.",
-    // header: "Move Better. Train Smarter. Progress with Purpose.",
     subheader:
-      "The smart, fun, and easy way to learn an exercise.",
-    cta: ["Try Your First Skill Path Free", "See How It Works"],
+      "The smart, fun, and easy way to track pushups and compete with friends.",
+    cta: ["Start Tracking Pushups", "See How It Works"],
   },
   benefits: {
-    header: "A Smarter Way to Train",
-    subheader: "Progress and perform at your best using Skilltree.",
+    header: "All-in-One Pushup Analytics",
+    subheader: "Track, compete, and improve with Rep AI.",
     items: [
       {
-        title: "Skill Trees for Every Goal",
+        title: "Smart Pushup Tracking",
         description:
-          "Know exactly what to work on next, with step-by-step progressions toward skills like push-ups, handstands, and muscle-ups.",
+          "Track your pushup reps, sets, and progress with intelligent analytics and insights.",
         color: "purple",
         img: "tree.svg",
       },
       {
-        title: "AI-Guided Trainer",
+        title: "AI-Powered Analytics",
         description:
-          "Get real-time cues to improve form and reduce injury risk — even if you're just getting started.",
+          "Get real-time feedback on your form and performance with advanced AI analysis.",
         color: "green",
         img: "tree.svg",
       },
       {
-        title: "Progressive Strength Levels",
+        title: "Competitive Duals",
         description:
-          "From your first push-up to your first planche — we meet you where you're at and keep the challenge growing.",
+          "Challenge friends to pushup duals and compete for the top spot on leaderboards.",
         color: "orange",
         img: "tree.svg",
       },
       {
-        title: "Workout Logging & Progress Tracking",
+        title: "Progress Tracking",
         description:
-          "Visualize your gains. Track reps, consistency, and new skills unlocked.",
+          "Visualize your gains with detailed charts, streaks, and performance metrics.",
         color: "yellow",
         img: "tree.svg",
       },
       {
         title: "Smart Recommendations",
         description:
-          "Our system adapts to your progress and preferences to keep training fresh and effective.",
+          "Get personalized workout suggestions based on your progress and goals.",
         color: "red",
         img: "tree.svg",
       },
       {
-        title: "Built-in Community Support",
+        title: "Community Features",
         description:
-          "Get inspired by others on your path, share wins, and stay accountable.",
+          "Join a community of pushup enthusiasts, share achievements, and stay motivated.",
         color: "blue",
         img: "tree.svg",
       },
     ],
   },
   features: {
-    header: "Train With Confidence — Not Confusion",
-    subheader: "Learn how to make Skilltree work for you.",
+    header: "Track Pushups Like Never Before",
+    subheader: "Discover how Rep AI revolutionizes pushup tracking and competition.",
     items: [
       {
-        title: "Clear Progression",
+        title: "Precise Rep Counting",
         description:
-          "No more guesswork — follow structured plans that show the way.",
+          "Accurate pushup counting with AI-powered form detection and validation.",
         image: "tree.svg",
       },
       {
-        title: "AI-Powered Form",
+        title: "AI Form Analysis",
         description:
-          "Learn proper technique to stay safe and build real strength.",
+          "Get real-time feedback on your pushup form to prevent injury and improve technique.",
         image: "ai.svg",
       },
       {
-        title: "Compete with Friends",
-        description: "Challenge your friends to AI-powered duels.",
+        title: "Competitive Duals",
+        description: "Challenge friends to head-to-head pushup competitions with live tracking.",
         image: "compete.svg",
       },
       {
-        title: "Efficient Workouts",
+        title: "Performance Analytics",
         description:
-          "Maximize results with focused sessions that build real skill.",
+          "Detailed insights into your pushup performance, trends, and improvement areas.",
         image: "progression.png",
       },
       {
-        title: "Rep With Confidence",
+        title: "Progress Visualization",
         description:
-          "Build strength, own your progress — and turn heads doing it.",
+          "Beautiful charts and graphs showing your pushup journey and achievements.",
         image: "progress.svg",
       },
     ],
     taglines: [
-      "Progress is addictive.",
-      "Your body is your gym. We’re your guide.",
+      "Every rep counts.",
+      "Track. Compete. Progress.",
     ],
   },
   example: {
-    header: "Start Your Journey in 3 Simple Steps",
+    header: "Start Your Pushup Journey in 3 Simple Steps",
     steps: [
       {
-        title: "Download Skilltree",
+        title: "Download Rep AI",
         description: "Available on iOS (Android coming soon).",
       },
       {
-        title: "Choose a Skill Path",
+        title: "Start Tracking Pushups",
         description:
-          "Whether it’s push-ups, pull-ups, or handstands — we’ll break it down.",
+          "Whether it's your first pushup or your hundredth — we'll track it all.",
       },
       {
-        title: "Follow Your Adaptive Plan",
+        title: "Compete and Progress",
         description:
-          "Train safely, track your growth, and celebrate every unlocked skill.",
+          "Train safely, track your growth, and compete with friends for the top spot.",
       },
     ],
   },
@@ -124,32 +122,32 @@ const HomeCopy = {
       "Don't just take it from us. See what people think of our product.",
     quotes: [
       {
-        text: "Before Skilltree I didnt know where to start. Now I feel confident every time I train. The app really helped me understand what to do next.",
+        text: "Before Rep AI I didn't know how to track my pushups properly. Now I feel confident every time I train. The app really helped me understand my progress.",
         author: "Priya S., Beginner",
         rating: 5,
       },
       {
-        text: "Ive made more progress in 3 months than I did in a year at the gym. Finally got my first handstand last week!",
+        text: "I've made more progress in 3 months than I did in a year at the gym. Finally got my first 50 pushups in a row last week!",
         author: "Marcus J., Student Athlete",
         rating: 5,
       },
       {
-        text: "The AI trainer gives me peace of mind. I know Im doing things right and not gonna hurt myself.",
+        text: "The AI form analysis gives me peace of mind. I know I'm doing pushups right and not gonna hurt myself.",
         author: "Jordan W., Beginner",
         rating: 5,
       },
       {
-        text: "The workouts adapt to me. I dont have to think, just show up and train. Its been a huge time saver and completely removed the mental friction that used to come with working out.",
+        text: "The competitive duals keep me motivated. I don't have to think, just show up and compete. It's been a huge time saver and completely removed the mental friction that used to come with working out.",
         author: "Aisha K., Busy Mom",
         rating: 5,
       },
       {
-        text: "Its like having a personal coach in my pocket. The program adjusts to how Im feeling, tracks my progress automatically, and pushes me just the right amount. Honestly smarter than some human coaches Ive had.",
+        text: "It's like having a personal pushup coach in my pocket. The app adjusts to how I'm feeling, tracks my progress automatically, and pushes me just the right amount. Honestly smarter than some human coaches I've had.",
         author: "Derek F., Intermediate",
         rating: 5,
       },
       {
-        text: "The progress tracking keeps me motivated. I can actually see how far Ive come, which makes it way easier to stay consistent. I check my metrics more than I check social media now.",
+        text: "The progress tracking keeps me motivated. I can actually see how far I've come, which makes it way easier to stay consistent. I check my pushup metrics more than I check social media now.",
         author: "Arjun P., Intermediate",
         rating: 4,
       },
@@ -159,7 +157,7 @@ const HomeCopy = {
         rating: 5,
       },
       {
-        text: "Skilltree helped me finally stay consistent. Thats what changed everything. I used to jump from one program to another, always second guessing. Now I trust the plan and stick with it.",
+        text: "Rep AI helped me finally stay consistent with pushups. That's what changed everything. I used to jump from one program to another, always second guessing. Now I trust the plan and stick with it.",
         author: "Victor R., Intermediate",
         rating: 5,
       },
@@ -167,20 +165,20 @@ const HomeCopy = {
   },
 
   pricing: {
-    header: "Flexible Plans for Every Athlete",
+    header: "Choose Your Plan",
     features: [
       {
-        feature: "First skill path included",
+        feature: "Basic pushup tracking",
         free: true,
         pro: true,
       },
       {
-        feature: "Core workouts",
+        feature: "Daily streaks",
         free: true,
         pro: true,
       },
       {
-        feature: "Progress tracking",
+        feature: "Progress charts",
         free: true,
         pro: true,
       },
@@ -190,22 +188,22 @@ const HomeCopy = {
         pro: true,
       },
       {
-        feature: "Unlimited skill trees",
+        feature: "Unlimited duals",
         free: false,
         pro: true,
       },
       {
-        feature: "Advanced AI form guidance",
+        feature: "Advanced AI analytics",
         free: false,
         pro: true,
       },
       {
-        feature: "Smart plan adjustments",
+        feature: "Performance insights",
         free: false,
         pro: true,
       },
       {
-        feature: "Full video library",
+        feature: "Community features",
         free: false,
         pro: true,
       },
@@ -236,35 +234,35 @@ const HomeCopy = {
       {
         question: "Do I need any equipment?",
         answer:
-          "Nope. Skilltree is designed around bodyweight exercises that can be done at home, in the park, or anywhere.",
+          "Nope. Rep AI is designed for pushups which can be done anywhere — at home, in the park, or at the gym.",
       },
       {
-        question: "I’m a total beginner. Can I still use the app?",
+        question: "I'm a total beginner. Can I still use the app?",
         answer:
-          "Yes! Skilltree is beginner-friendly and will guide you step-by-step, with modifications and safety tips included.",
+          "Yes! Rep AI is beginner-friendly and will guide you step-by-step, with form tips and modifications included.",
       },
       {
         question: "Is there a free version?",
         answer:
-          "Yes — your first skill path and core workouts are completely free. You can upgrade anytime for more features.",
+          "Yes — basic pushup tracking and daily streaks are completely free. You can upgrade anytime for advanced features.",
       },
       {
         question: "What makes this different from other fitness apps?",
         answer:
-          "We focus on structured skill development — not just burning calories. Plus, AI form checks and visual skill trees help you train smarter and safer.",
+          "We focus specifically on pushup analytics and competition. Plus, AI form analysis and competitive duals help you track progress and compete with friends.",
       },
     ],
   },
   finalCta: {
-    header: "Build Confidence. Build Strength. Build Your Tree.",
+    header: "Track. Compete. Progress.",
     subheader:
-      "Ready to train with clarity, structure, and real results? Start your journey today.",
-    cta: ["Get Skilltree on iOS", "Coming Soon: Android"],
+      "Ready to revolutionize your pushup training? Start tracking and competing today.",
+    cta: ["Get Rep AI on iOS", "Coming Soon: Android"],
   },
   footer: {
     links: ["About", "Blog", "Privacy Policy", "Terms of Use", "Contact Us"],
     socials: ["Instagram", "YouTube", "TikTok"],
-    copyright: "© 2025 Skilltree. All rights reserved.",
+    copyright: "© 2025 Rep AI. All rights reserved.",
   },
 };
 

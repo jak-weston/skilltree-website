@@ -94,86 +94,170 @@ export default function Support() {
   };
 
   return (
-    <div className="font-sans">
-      <main className="flex flex-col">
+    <div className="font-sans min-h-screen overflow-hidden">
+      {/* Global blue gradient background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-blue-900/50 via-blue-800/30 to-indigo-900/50 -z-10" />
+      
+      {/* Animated background elements for entire page */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-400/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl animate-pulse delay-500" />
+      </div>
+      
+      <main className="flex flex-col relative z-10">
         <Navbar />
-        <div className="w-full min-h-[60vh] flex flex-col items-center justify-center gap-6 border-b border-border border-solid px-4 text-white bg-background pb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mt-12 mb-2">Support</h1>
-          <p className="max-w-xl text-center text-lg text-white/90 mb-4">
-            Need help or have questions? Fill out the form below and our support team will get back to you as soon as possible.
-          </p>
-          <form onSubmit={handleSubmit} className="w-full max-w-2xl flex flex-col gap-4 bg-secondary/30 rounded-xl p-6 border border-border pb-12">
-            <Input
-              type="text"
-              placeholder="Full Name"
-              value={fullName}
-              onChange={e => setFullName(e.target.value)}
-              required
-            />
-            <Input
-              type="email"
-              placeholder="Email Address"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              required
-            />
-            <div>
-              <label className="block mb-1 text-sm">Type of Issue</label>
-              <Select value={issueType} onValueChange={setIssueType}>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select an issue type" />
-                </SelectTrigger>
-                <SelectContent>
-                  {ISSUE_TYPES.map((type) => (
-                    <SelectItem key={type.value} value={type.value}>{type.label}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+        <div className="w-full h-[78vh] relative overflow-hidden flex items-center justify-center flex-col gap-6 px-4 text-white">
+          <div className="relative z-10 text-center max-w-4xl mx-auto">
+            <div className="glass-card p-8 mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                Rep AI <span className="text-blue-300">Support</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Need help with Rep AI? We&apos;re here to assist you with any questions or issues.
+              </p>
             </div>
-            {issueType === "Other" && (
-              <Input
-                type="text"
-                placeholder="Describe your issue"
-                value={otherIssue}
-                onChange={e => setOtherIssue(e.target.value)}
-                required
-              />
-            )}
-            <Input
-              type="text"
-              placeholder="Device & Browser Info (e.g. iPhone 14, Chrome)"
-              value={deviceInfo}
-              onChange={e => setDeviceInfo(e.target.value)}
-              required
-            />
-            <textarea
-              className="rounded-md border border-border bg-background px-3 py-2 text-base text-white placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] min-h-[100px]"
-              placeholder="Describe the issue in detail"
-              value={description}
-              onChange={e => setDescription(e.target.value)}
-              required
-            />
-            <div>
-              <label className="block mb-1 text-sm">Priority Level</label>
-              <Select value={priority} onValueChange={setPriority}>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a priority" />
-                </SelectTrigger>
-                <SelectContent>
-                  {PRIORITY_LEVELS.map((level) => (
-                    <SelectItem key={level.value} value={level.value}>{level.label}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-2xl mx-auto">
+            <div className="glass-card p-8">
+              <h2 className="text-2xl font-semibold mb-6 text-white">Contact Support</h2>
+              
+              {success && (
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-300">
+                  {success}
+                </div>
+              )}
+              
+              {error && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg text-red-300">
+                  {error}
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-white mb-2">
+                      Full Name *
+                    </label>
+                    <Input
+                      type="text"
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
+                      required
+                      className="glass-input text-white placeholder:text-white/60"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-white mb-2">
+                      Email *
+                    </label>
+                    <Input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="glass-input text-white placeholder:text-white/60"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">
+                    Issue Type *
+                  </label>
+                  <Select value={issueType} onValueChange={setIssueType}>
+                    <SelectTrigger className="glass-input text-white">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent className="glass-select-content">
+                      {ISSUE_TYPES.map((type) => (
+                        <SelectItem key={type.value} value={type.value} className="glass-select-item">
+                          {type.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {issueType === "Other" && (
+                  <div>
+                    <label className="block text-sm font-medium text-white mb-2">
+                      Please describe your issue
+                    </label>
+                    <Input
+                      type="text"
+                      value={otherIssue}
+                      onChange={(e) => setOtherIssue(e.target.value)}
+                      className="glass-input text-white placeholder:text-white/60"
+                      placeholder="Describe your issue..."
+                    />
+                  </div>
+                )}
+
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">
+                    Description *
+                  </label>
+                  <textarea
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    required
+                    rows={4}
+                    className="w-full glass-input text-white placeholder:text-white/60 resize-none"
+                    placeholder="Please provide a detailed description of your issue..."
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">
+                    Device Information
+                  </label>
+                  <Input
+                    type="text"
+                    value={deviceInfo}
+                    onChange={(e) => setDeviceInfo(e.target.value)}
+                    className="glass-input text-white placeholder:text-white/60"
+                    placeholder="Device, browser, OS (optional)"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">
+                    Priority Level
+                  </label>
+                  <Select value={priority} onValueChange={setPriority}>
+                    <SelectTrigger className="glass-input text-white">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent className="glass-select-content">
+                      {PRIORITY_LEVELS.map((level) => (
+                        <SelectItem key={level.value} value={level.value} className="glass-select-item">
+                          {level.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full glass-button text-white hover:text-blue-300"
+                >
+                  {loading ? "Submitting..." : "Submit Support Request"}
+                </Button>
+              </form>
             </div>
-            {success && <div className="text-green-400 text-center">{success}</div>}
-            {error && <div className="text-red-400 text-center">{error}</div>}
-            <Button type="submit" disabled={loading} className="mt-2">
-              {loading ? "Submitting..." : "Submit"}
-            </Button>
-          </form>
+          </div>
         </div>
       </main>
+
       <Footer />
     </div>
   );
