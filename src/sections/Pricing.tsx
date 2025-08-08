@@ -5,7 +5,7 @@ import { LucideCircleCheck, LucideCircleX } from "lucide-react";
 import { useState } from "react";
 
 export default function Pricing() {
-  const { header, plans, cta, note, features } = copy.pricing;
+  const { header, plans, note, features } = copy.pricing;
 
   const [monthly, setMonthly] = useState(false);
 

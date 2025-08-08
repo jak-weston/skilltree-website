@@ -3,7 +3,6 @@ import Benefits from "@/sections/Benefits";
 import Demo from "@/sections/Demo";
 import Testimonials from "@/sections/Testimonials";
 import Pricing from "@/sections/Pricing";
-import FAQ from "@/sections/FAQ";
 import FinalCTA from "@/sections/FinalCTA";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";

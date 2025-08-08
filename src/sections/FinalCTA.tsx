@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { HomeCopy as copy } from "@/content";
-import { LucideArrowRight } from "lucide-react";
 
 export default function FinalCTA() {
   const { header, subheader } = copy.finalCta;
