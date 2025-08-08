@@ -14,9 +14,9 @@ export default function FAQPage() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-400/20 rounded-full blur-3xl animate-pulse delay-1000" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl animate-pulse delay-500" />
       </div>
-      <main className="flex flex-col relative z-10">
-        <Navbar />
-        <div className="w-full min-h-[60vh] flex flex-col items-center justify-center gap-6 px-4 text-white pb-16">
+      <Navbar />
+      <main className="flex flex-col relative z-10 pt-20">
+        <div className="w-full h-[78vh] relative overflow-hidden flex items-center justify-center flex-col gap-6 px-4 text-white">
           <div className="relative z-10 text-center max-w-4xl mx-auto">
             <div className="glass-card p-8 mb-8">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">

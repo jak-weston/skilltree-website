@@ -22,8 +22,8 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl animate-pulse delay-500" />
       </div>
       
-      <main className="flex flex-col relative z-10">
-        <Navbar />
+      <Navbar />
+      <main className="flex flex-col relative z-10 pt-20">
         {/* Landing Section with Glassmorphism */}
         <div className="w-full h-[78vh] relative overflow-hidden flex items-center justify-center flex-col gap-6 px-4 text-white">
           {/* Content */}
