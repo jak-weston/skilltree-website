@@ -1,8 +1,6 @@
 import Features from "@/sections/Features";
 import Benefits from "@/sections/Benefits";
-import Demo from "@/sections/Demo";
 import Testimonials from "@/sections/Testimonials";
-import Pricing from "@/sections/Pricing";
 import FinalCTA from "@/sections/FinalCTA";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -47,11 +45,9 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-4">
-          {/* <Demo /> */}
           <Features />
           <Benefits />
           <Testimonials />
-          {/* <Pricing /> */}
           <FinalCTA />
         </div>
       </main>
