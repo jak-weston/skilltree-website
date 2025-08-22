@@ -47,11 +47,11 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-4">
-          <Demo />
+          {/* <Demo /> */}
           <Features />
           <Benefits />
           <Testimonials />
-          <Pricing />
+          {/* <Pricing /> */}
           <FinalCTA />
         </div>
       </main>

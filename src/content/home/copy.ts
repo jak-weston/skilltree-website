@@ -14,42 +14,42 @@ const HomeCopy = {
         description:
           "Track your pushup reps, sets, and progress with intelligent analytics and insights.",
         color: "purple",
-        img: "tree.svg",
+        img: "pushup-tracking.png",
       },
       {
         title: "AI-Powered Analytics",
         description:
           "Get real-time feedback on your form and performance with advanced AI analysis.",
         color: "green",
-        img: "tree.svg",
+        img: "analytics-overview.png",
       },
       {
         title: "Competitive Duals",
         description:
           "Challenge friends to pushup duals and compete for the top spot on leaderboards.",
         color: "orange",
-        img: "tree.svg",
+        img: "challenge-duel.png",
       },
       {
         title: "Progress Tracking",
         description:
           "Visualize your gains with detailed charts, streaks, and performance metrics.",
         color: "yellow",
-        img: "tree.svg",
+        img: "analytics-calendar.png",
       },
       {
         title: "Smart Recommendations",
         description:
           "Get personalized workout suggestions based on your progress and goals.",
         color: "red",
-        img: "tree.svg",
+        img: "pushup-tracking.png",
       },
       {
         title: "Community Features",
         description:
           "Join a community of pushup enthusiasts, share achievements, and stay motivated.",
         color: "blue",
-        img: "tree.svg",
+        img: "social-hub.png",
       },
     ],
   },
@@ -60,31 +60,31 @@ const HomeCopy = {
       {
         title: "Precise Rep Counting",
         description:
-          "Accurate pushup counting with AI-powered form detection and validation.",
-        image: "tree.svg",
+          "Accurate pushup counting with real-time tracking and form validation for every rep.",
+        image: "pushup-tracking.png",
       },
       {
-        title: "AI Form Analysis",
+        title: "Social Leaderboards",
         description:
-          "Get real-time feedback on your pushup form to prevent injury and improve technique.",
-        image: "ai.svg",
+          "Add friends, climb leaderboards, and compete for the top spot in your fitness community.",
+        image: "social-hub.png",
       },
       {
         title: "Competitive Duals",
-        description: "Challenge friends to head-to-head pushup competitions with live tracking.",
-        image: "compete.svg",
+        description: "Challenge friends to head-to-head pushup competitions with live tracking and real-time results.",
+        image: "challenge-duel.png",
       },
       {
         title: "Performance Analytics",
         description:
-          "Detailed insights into your pushup performance, trends, and improvement areas.",
-        image: "progression.png",
+          "Comprehensive insights into your pushup performance, trends, and areas for improvement.",
+        image: "analytics-overview.png",
       },
       {
         title: "Progress Visualization",
         description:
-          "Beautiful charts and graphs showing your pushup journey and achievements.",
-        image: "progress.svg",
+          "Beautiful charts, weekly trends, and calendar views showing your pushup journey and achievements.",
+        image: "analytics-calendar.png",
       },
     ],
     taglines: [

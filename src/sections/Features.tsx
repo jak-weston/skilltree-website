@@ -89,17 +89,14 @@ export default function Features() {
                 className="relative z-10 flex items-center justify-center"
               >
                 {/* Phone frame */}
-                <div className="relative glass-card rounded-[2.5rem] border-[8px] border-white/20 shadow-2xl w-[340px] h-[700px] flex items-center justify-center overflow-hidden">
+                <div>
                   {/* Notch */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-3 bg-white/20 rounded-b-xl z-20 -translate-y-[2px]" />
+                  <div></div>
                   {/* Image (phone screen) */}
                   <Image
                     src={`/features/${selectedItem.image}`}
                     alt="Rep AI feature"
-                    style={{
-                      boxShadow: "6px 9px 0 0 rgba(255, 255, 255, 0.1)",
-                    }}
-                    className="w-full h-full object-cover rounded-[2rem] bg-white/5"
+                    className="w-full h-full object-cover rounded-[2rem]"
                     width={312}
                     height={676}
                   />
