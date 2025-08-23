@@ -1,5 +1,5 @@
 import { FaShieldHalved, FaStar } from "react-icons/fa6";
-import { FaLaptop, FaQuestionCircle, FaRocket } from "react-icons/fa";
+import { FaRocket } from "react-icons/fa";
 
 const nav = [
   {
@@ -18,18 +18,18 @@ const nav = [
         icon: FaRocket,
         desc: "Why use Rep AI?",
       },
-      {
-        href: "/#demo",
-        label: "Demo",
-        icon: FaLaptop,
-        desc: "Explore Rep AI's features",
-      },
-      {
-        href: "/#faq",
-        label: "FAQ",
-        icon: FaQuestionCircle,
-        desc: "Frequently Asked Questions",
-      },
+      // {
+      //   href: "/#demo",
+      //   label: "Demo",
+      //   icon: FaLaptop,
+      //   desc: "Explore Rep AI's features",
+      // },
+      // {
+      //   href: "/#faq",
+      //   label: "FAQ",
+      //   icon: FaQuestionCircle,
+      //   desc: "Frequently Asked Questions",
+      // },
       {
         href: "/privacy-policy",
         label: "Privacy & TOS",
@@ -40,7 +40,7 @@ const nav = [
   },
 
   { href: "/faq", label: "FAQ" },
-  { href: "/#pricing", label: "Pricing" },
+  // { href: "/#pricing", label: "Pricing" },
   { href: "/blog", label: "Blog" },
   { href: "/support", label: "Support" },
   { href: "/beta-test", label: "Beta Test" },
