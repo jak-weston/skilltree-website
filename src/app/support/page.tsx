@@ -107,19 +107,6 @@ export default function Support() {
       
       <Navbar />
       <main className="flex flex-col relative z-10 pt-20">
-        <div className="w-full h-[78vh] relative overflow-hidden flex items-center justify-center flex-col gap-6 px-4 text-white">
-          <div className="relative z-10 text-center max-w-4xl mx-auto">
-            <div className="glass-card p-8 mb-8">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                Rep AI <span className="text-blue-300">Support</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Need help with Rep AI? We&apos;re here to assist you with any questions or issues.
-              </p>
-            </div>
-          </div>
-        </div>
-
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl mx-auto">
             <div className="glass-card p-8">

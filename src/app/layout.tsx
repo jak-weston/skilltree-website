@@ -45,6 +45,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <meta name="apple-mobile-web-app-title" content="Rep AI" />
+        <meta name="apple-itunes-app" content="app-id=6749606746" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
       <body

@@ -334,3 +334,17 @@ html {
 .glass-glow {
   animation: glass-glow 3s ease-in-out infinite;
 }
+
+/* Testimonials infinite scroll animation */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: infinite-scroll 40s linear infinite;
+}

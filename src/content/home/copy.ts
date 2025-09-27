@@ -251,6 +251,11 @@ const HomeCopy = {
         answer:
           "We focus specifically on pushup analytics and competition. Plus, AI form analysis and competitive duals help you track progress and compete with friends.",
       },
+      {
+        question: "How do you collect and store my information?",
+        answer:
+          "We collect minimal data necessary for app functionality and use industry-standard security measures. For detailed information about our data practices, please review our Terms of Service and Privacy Policy.",
+      },
     ],
   },
   finalCta: {

@@ -12,27 +12,15 @@ export default function Footer() {
           <span className="text-xl font-bold text-white">Rep AI</span>
         </div>
         <div className="flex flex-wrap gap-4 mb-2">
-          {navItems.map((item) =>
-            !item.children ? (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="hover:text-blue-300 transition-colors text-white/90"
-              >
-                {item.label}
-              </Link>
-            ) : (
-              item.children.map((child) => (
-                <Link
-                  key={child.href}
-                  href={child.href}
-                  className="hover:text-blue-300 transition-colors text-white/80"
-                >
-                  {child.label}
-                </Link>
-              ))
-            )
-          )}
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="hover:text-blue-300 transition-colors text-white/90"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
         <div className="mt-2 text-sm text-white/60">
           {copy.footer.copyright}

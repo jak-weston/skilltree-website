@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { HomeCopy as copy } from "@/content";
 
 export default function FinalCTA() {
@@ -24,13 +23,10 @@ export default function FinalCTA() {
           {subheader}
         </p>
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 relative z-10">
-          <Button className="glass-button text-white hover:text-white px-8 py-3 text-lg font-bold shadow-2xl hover:shadow-blue-500/25" asChild>
-            <a href="#pricing">Get Started Today</a>
-          </Button>
-          <Button className="glass-button text-white hover:text-white px-8 py-3 text-lg font-bold shadow-2xl hover:shadow-blue-500/25 group" asChild>
-            <a href="/beta-test">Join Beta Test</a>
-          </Button>
+        <div className="mt-8 flex justify-center items-center relative z-10">
+          <a href="https://apps.apple.com/us/app/rep-ai/id6749606746?itscg=30200&itsct=apps_box_badge&mttnsubad=6749606746" target="_blank" rel="noopener noreferrer" style={{display: 'inline-block'}}>
+            <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1755820800" alt="Download on the App Store" style={{width: '180px', height: '60px', verticalAlign: 'middle', objectFit: 'contain'}} />
+          </a>
         </div>
       </div>
     </section>

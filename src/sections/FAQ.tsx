@@ -42,7 +42,21 @@ export default function FAQ() {
                     )}
                   </div>
                   {expanded && (
-                    <p className="pt-3 text-md p-m md:px-0 text-white/80">{q.answer}</p>
+                    <div className="pt-3 text-md p-m md:px-0 text-white/80">
+                      {q.question === "How do you collect and store my information?" ? (
+                        <div>
+                          <p className="mb-2">
+                            We collect minimal data necessary for app functionality and use industry-standard security measures. For detailed information about our data practices, please review our{" "}
+                            <a href="/privacy-policy" className="text-blue-300 hover:text-blue-200 underline">
+                              Terms of Service and Privacy Policy
+                            </a>
+                            .
+                          </p>
+                        </div>
+                      ) : (
+                        <p>{q.answer}</p>
+                      )}
+                    </div>
                   )}
                 </div>
 
