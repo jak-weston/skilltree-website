@@ -9,6 +9,10 @@ First, run the development server. Note! This a `pnpm` project. It makes everyth
 ```bash
 pnpm dev
 ```
+### Running local host
+```bash
+npm run dev
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
