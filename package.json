@@ -16,7 +16,7 @@
     "email-validator": "^2.0.4",
     "lucide-react": "^0.514.0",
     "motion": "^12.18.1",
-    "next": "15.3.3",
+    "next": "15.3.8",
     "react": "^19.0.0",
     "react-click-away-listener": "^2.4.0",
     "react-dom": "^19.0.0",
